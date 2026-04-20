@@ -1,4 +1,7 @@
 <script lang="ts">
+  import '@fontsource/space-grotesk/400.css';
+  import '@fontsource/space-grotesk/700.css';
+
   let menuOpen = $state(false);
 
   const navItems = [
@@ -10,362 +13,362 @@
   ];
 
   const services = [
-    {
-      icon: '🤖',
-      title: 'Lorem Ipsum Dolor',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim.'
-    },
-    {
-      icon: '⚡',
-      title: 'Consectetur Adipiscing',
-      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute.'
-    },
-    {
-      icon: '🧠',
-      title: 'Sed Do Eiusmod',
-      desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint occaecat.'
-    },
-    {
-      icon: '📱',
-      title: 'Tempor Incididunt',
-      desc: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum sed perspiciatis.'
-    },
-    {
-      icon: '🔗',
-      title: 'Labore Et Dolore',
-      desc: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos.'
-    },
-    {
-      icon: '🛡️',
-      title: 'Magna Aliqua Enim',
-      desc: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.'
-    }
+    { num: '01', title: 'Lorem Ipsum Dolor', desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' },
+    { num: '02', title: 'Consectetur Adipiscing', desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.' },
+    { num: '03', title: 'Sed Do Eiusmod', desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.' },
+    { num: '04', title: 'Tempor Incididunt', desc: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.' },
+    { num: '05', title: 'Labore Et Dolore', desc: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.' },
+    { num: '06', title: 'Magna Aliqua Enim', desc: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.' },
   ];
 
   const stack = [
-    { name: 'Lorem Ipsum', color: '#3178c6' },
-    { name: 'Dolor Sit', color: '#3572A5' },
-    { name: 'Amet Consectetur', color: '#ffffff' },
-    { name: 'Adipiscing Elit', color: '#ff3e00' },
-    { name: 'Sed Do', color: '#61dafb' },
-    { name: 'Eiusmod Tempor', color: '#68a063' },
-    { name: 'Incididunt Ut', color: '#336791' },
-    { name: 'Labore Dolore', color: '#003b57' },
-    { name: 'Magna Aliqua', color: '#d4a96a' },
-    { name: 'Enim Ad Minim', color: '#412991' },
-    { name: 'Veniam Quis', color: '#2496ed' },
-    { name: 'Nostrud Exercitation', color: '#38bdf8' },
+    'Lorem Ipsum', 'Dolor Sit', 'Amet Elit', 'Sed Do',
+    'Eiusmod Tempor', 'Incididunt Ut', 'Labore Dolore',
+    'Magna Aliqua', 'Enim Ad Minim', 'Veniam Quis',
+    'Nostrud Exercit', 'Ullamco Labor',
   ];
 
   const projects = [
     {
+      num: '001',
       title: 'Lorem Ipsum Dolor Platform',
       tags: ['Amet', 'Consectetur', 'Adipiscing'],
       desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-      link: '#'
+      year: '2025',
     },
     {
+      num: '002',
       title: 'Sed Do Eiusmod Suite',
       tags: ['Tempor', 'Incididunt', 'Labore'],
       desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      link: '#'
+      year: '2024',
     },
     {
+      num: '003',
       title: 'Magna Aliqua App',
       tags: ['Dolore', 'Enim', 'Minim'],
       desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
-      link: '#'
+      year: '2024',
     },
-  ];
-
-  const stats: [string, string][] = [
-    ['XX+', 'Lorem Ipsum'],
-    ['XX+', 'Dolor Sit'],
-    ['XX+', 'Amet Elit'],
-    ['XX%', 'Consectetur'],
-  ];
-
-  const aboutGrid: [string, string][] = [
-    ['Lorem Ipsum', 'Dolor sit amet'],
-    ['Consectetur', 'Adipiscing elit'],
-    ['Sed Do', 'Eiusmod tempor'],
-    ['Incididunt', 'Ut labore et'],
-  ];
-
-  const contactLinks = [
-    { icon: '✉️', label: 'Lorem', val: 'lorem@ipsum.dolor', href: 'mailto:lorem@ipsum.dolor' },
-    { icon: '💼', label: 'Ipsum', val: '/in/loremipsum', href: '#' },
-    { icon: '🐙', label: 'Dolor', val: 'lorem.ipsum/dolor', href: '#' },
   ];
 </script>
 
 <svelte:head>
   <title>Lorem Ipsum — Dolor Sit Amet</title>
-  <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit." />
 </svelte:head>
 
-<!-- NAV -->
-<header class="fixed top-0 w-full z-50 border-b border-[#2a2a38] bg-[#0f0f13]/80 backdrop-blur-md">
-  <nav class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-    <a href="#home" class="font-semibold text-white tracking-tight">LI<span class="text-indigo-400">.</span></a>
+<!-- ══════════════════════════════════════════════ NAV -->
+<header class="sticky top-0 z-50 bg-[#F2F0E8] border-b-2 border-[#0A0A0A]">
+  <nav class="max-w-7xl mx-auto px-6 h-14 flex items-center justify-between">
 
-    <ul class="hidden md:flex items-center gap-8 text-sm text-[#8888a0]">
+    <a href="#home" class="font-bold text-xl tracking-tighter text-[#0A0A0A] uppercase">
+      LI<span class="text-[#CAFF00] [-webkit-text-stroke:1px_#0A0A0A]">.</span>
+    </a>
+
+    <!-- Desktop -->
+    <ul class="hidden md:flex items-center gap-0 text-xs font-bold uppercase tracking-widest">
       {#each navItems as item}
-        <li><a href={item.href} class="hover:text-white transition-colors">{item.label}</a></li>
+        <li>
+          <a href={item.href}
+            class="px-4 py-4 text-[#6B6B6B] hover:text-[#0A0A0A] hover:bg-[#CAFF00] transition-colors border-l-2 border-transparent hover:border-[#0A0A0A] inline-block">
+            {item.label}
+          </a>
+        </li>
       {/each}
     </ul>
 
-    <a href="#contact" class="hidden md:inline-flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white text-sm font-medium px-4 py-2 rounded-lg transition-colors">
-      Lorem Ipsum
+    <a href="#contact"
+      class="hidden md:inline-block bg-[#0A0A0A] text-[#CAFF00] text-xs font-bold uppercase tracking-widest px-5 py-2.5 border-2 border-[#0A0A0A] hover:bg-[#CAFF00] hover:text-[#0A0A0A] transition-colors">
+      Lorem →
     </a>
 
-    <button
-      class="md:hidden text-[#8888a0] hover:text-white"
-      onclick={() => menuOpen = !menuOpen}
-      aria-label="Toggle menu"
-    >
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        {#if menuOpen}
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
-        {:else}
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-        {/if}
-      </svg>
+    <button class="md:hidden font-bold text-xs uppercase tracking-widest border-2 border-[#0A0A0A] px-3 py-1.5"
+      onclick={() => menuOpen = !menuOpen}>
+      {menuOpen ? 'Close' : 'Menu'}
     </button>
   </nav>
 
   {#if menuOpen}
-    <div class="md:hidden bg-[#16161d] border-t border-[#2a2a38] px-6 py-4 flex flex-col gap-4 text-sm">
+    <div class="md:hidden border-t-2 border-[#0A0A0A] bg-[#F2F0E8]">
       {#each navItems as item}
-        <a href={item.href} class="text-[#8888a0] hover:text-white" onclick={() => menuOpen = false}>{item.label}</a>
+        <a href={item.href}
+          class="block px-6 py-4 text-xs font-bold uppercase tracking-widest border-b border-[#0A0A0A]/20 hover:bg-[#CAFF00] transition-colors"
+          onclick={() => menuOpen = false}>
+          {item.label}
+        </a>
       {/each}
-      <a href="#contact" class="mt-2 bg-indigo-500 text-white text-center py-2 rounded-lg">Lorem Ipsum</a>
+      <a href="#contact" class="block px-6 py-4 text-xs font-bold uppercase tracking-widest bg-[#0A0A0A] text-[#CAFF00]">
+        Lorem →
+      </a>
     </div>
   {/if}
 </header>
 
-<!-- HERO -->
-<section id="home" class="min-h-screen flex items-center pt-16 relative overflow-hidden">
-  <div class="absolute inset-0 pointer-events-none">
-    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-indigo-500/10 rounded-full blur-3xl"></div>
-    <div class="absolute bottom-1/4 right-1/4 w-64 h-64 bg-violet-500/10 rounded-full blur-3xl"></div>
+<!-- ══════════════════════════════════════════════ HERO -->
+<section id="home" class="border-b-2 border-[#0A0A0A] min-h-[92vh] flex flex-col">
+
+  <!-- Top bar -->
+  <div class="border-b-2 border-[#0A0A0A] px-6 py-2 flex items-center justify-between text-[10px] font-bold uppercase tracking-widest text-[#6B6B6B]">
+    <span>Est. MMXXIV</span>
+    <span class="flex items-center gap-2">
+      <span class="w-1.5 h-1.5 rounded-full bg-[#CAFF00] border border-[#0A0A0A] inline-block animate-pulse"></span>
+      Lorem ipsum dolor sit
+    </span>
+    <span>Portfolio v2.0</span>
   </div>
 
-  <div class="max-w-6xl mx-auto px-6 py-24 relative z-10">
-    <div class="max-w-3xl">
-      <div class="inline-flex items-center gap-2 bg-[#16161d] border border-[#2a2a38] rounded-full px-4 py-1.5 text-sm text-indigo-400 mb-8">
-        <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-        Lorem ipsum dolor sit
-      </div>
+  <!-- Main hero grid -->
+  <div class="flex-1 grid grid-cols-1 lg:grid-cols-[1fr_auto] max-w-7xl mx-auto w-full">
 
-      <h1 class="text-5xl md:text-7xl font-bold text-white leading-tight mb-6">
-        Lorem Ipsum<br/>
-        <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-400">Dolor Sit Amet</span>
-      </h1>
-
-      <p class="text-xl text-[#8888a0] leading-relaxed mb-10 max-w-2xl">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
-      </p>
-
-      <div class="flex flex-wrap gap-4">
-        <a href="#projects" class="bg-indigo-500 hover:bg-indigo-600 text-white font-medium px-6 py-3 rounded-lg transition-colors">
-          Lorem Ipsum
-        </a>
-        <a href="#contact" class="border border-[#2a2a38] hover:border-indigo-500/50 text-[#e8e8f0] font-medium px-6 py-3 rounded-lg transition-colors">
-          Dolor Sit Amet
-        </a>
-      </div>
-
-      <div class="mt-16 flex flex-wrap gap-12">
-        {#each stats as [num, label]}
-          <div>
-            <div class="text-3xl font-bold text-white">{num}</div>
-            <div class="text-sm text-[#8888a0] mt-1">{label}</div>
-          </div>
-        {/each}
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services" class="py-24 bg-[#16161d]">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="mb-16">
-      <p class="text-indigo-400 text-sm font-medium uppercase tracking-widest mb-3">Lorem Ipsum</p>
-      <h2 class="text-4xl font-bold text-white mb-4">Dolor Sit Amet</h2>
-      <p class="text-[#8888a0] max-w-xl">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      {#each services as service}
-        <div class="bg-[#1e1e28] border border-[#2a2a38] rounded-xl p-6 hover:border-indigo-500/40 transition-colors group">
-          <div class="text-3xl mb-4">{service.icon}</div>
-          <h3 class="text-white font-semibold text-lg mb-2 group-hover:text-indigo-400 transition-colors">{service.title}</h3>
-          <p class="text-[#8888a0] text-sm leading-relaxed">{service.desc}</p>
-        </div>
-      {/each}
-    </div>
-  </div>
-</section>
-
-<!-- TECH STACK -->
-<section id="stack" class="py-24">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="mb-16">
-      <p class="text-indigo-400 text-sm font-medium uppercase tracking-widest mb-3">Lorem Ipsum</p>
-      <h2 class="text-4xl font-bold text-white mb-4">Dolor Sit Amet</h2>
-      <p class="text-[#8888a0] max-w-xl">
-        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat duis aute irure.
-      </p>
-    </div>
-
-    <div class="flex flex-wrap gap-3">
-      {#each stack as tech}
-        <div class="flex items-center gap-2 bg-[#16161d] border border-[#2a2a38] rounded-lg px-4 py-2.5 hover:border-indigo-500/40 transition-colors">
-          <div class="w-2.5 h-2.5 rounded-full" style="background-color: {tech.color}"></div>
-          <span class="text-sm text-[#e8e8f0] font-medium">{tech.name}</span>
-        </div>
-      {/each}
-    </div>
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section id="projects" class="py-24 bg-[#16161d]">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="mb-16">
-      <p class="text-indigo-400 text-sm font-medium uppercase tracking-widest mb-3">Lorem Ipsum</p>
-      <h2 class="text-4xl font-bold text-white mb-4">Dolor Sit Amet</h2>
-      <p class="text-[#8888a0] max-w-xl">
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur excepteur sint.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {#each projects as project}
-        <a href={project.link} class="group bg-[#1e1e28] border border-[#2a2a38] rounded-xl p-6 hover:border-indigo-500/40 transition-all hover:-translate-y-1 block">
-          <div class="flex flex-wrap gap-2 mb-4">
-            {#each project.tags as tag}
-              <span class="text-xs bg-indigo-500/10 text-indigo-400 border border-indigo-500/20 rounded-full px-2.5 py-0.5">{tag}</span>
-            {/each}
-          </div>
-          <h3 class="text-white font-semibold text-lg mb-2 group-hover:text-indigo-400 transition-colors">{project.title}</h3>
-          <p class="text-[#8888a0] text-sm leading-relaxed mb-4">{project.desc}</p>
-          <div class="flex items-center gap-1.5 text-indigo-400 text-sm font-medium">
-            Lorem Ipsum
-            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-            </svg>
-          </div>
-        </a>
-      {/each}
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" class="py-24">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-      <div class="relative">
-        <div class="aspect-square max-w-sm mx-auto lg:mx-0 rounded-2xl bg-[#16161d] border border-[#2a2a38] flex items-center justify-center">
-          <div class="text-center">
-            <div class="w-24 h-24 rounded-full bg-gradient-to-br from-indigo-400 to-violet-500 mx-auto mb-4 flex items-center justify-center text-3xl font-bold text-white">LI</div>
-            <p class="text-[#8888a0] text-sm">Lorem Ipsum</p>
-          </div>
-        </div>
-        <div class="absolute -bottom-4 -right-4 bg-[#1e1e28] border border-[#2a2a38] rounded-xl px-4 py-3 shadow-xl">
-          <div class="text-xs text-[#8888a0] mb-0.5">Lorem ipsum</div>
-          <div class="text-white font-semibold text-sm">🌏 Dolor Sit</div>
-        </div>
-      </div>
-
+    <!-- Left: headline -->
+    <div class="p-8 lg:p-16 flex flex-col justify-between border-r-0 lg:border-r-2 border-[#0A0A0A]">
       <div>
-        <p class="text-indigo-400 text-sm font-medium uppercase tracking-widest mb-3">Lorem Ipsum</p>
-        <h2 class="text-4xl font-bold text-white mb-6">Dolor Sit Amet Consectetur</h2>
-        <div class="space-y-4 text-[#8888a0] leading-relaxed">
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-          <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
-          <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.</p>
+        <p class="text-xs font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-6">
+          — Lorem ipsum dolor sit amet
+        </p>
+        <h1 class="text-[clamp(3rem,10vw,8rem)] font-bold leading-[0.9] tracking-tighter text-[#0A0A0A] uppercase mb-8">
+          Lorem<br/>
+          <span class="text-[#FF3B00]">Ipsum</span><br/>
+          Dolor.
+        </h1>
+        <p class="text-base text-[#6B6B6B] max-w-lg leading-relaxed mb-10">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud.
+        </p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#projects"
+            class="bg-[#0A0A0A] text-[#F2F0E8] font-bold uppercase text-xs tracking-widest px-6 py-3.5 border-2 border-[#0A0A0A] hover:bg-[#CAFF00] hover:text-[#0A0A0A] transition-colors">
+            Lorem Ipsum →
+          </a>
+          <a href="#contact"
+            class="bg-transparent text-[#0A0A0A] font-bold uppercase text-xs tracking-widest px-6 py-3.5 border-2 border-[#0A0A0A] hover:bg-[#0A0A0A] hover:text-[#F2F0E8] transition-colors">
+            Dolor Sit
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: stats column -->
+    <div class="hidden lg:grid grid-rows-4 w-48 border-l-2 border-[#0A0A0A] divide-y-2 divide-[#0A0A0A]">
+      {#each [['XX+', 'Lorem'], ['XX+', 'Ipsum'], ['XX+', 'Dolor'], ['XX%', 'Sit']] as [n, l]}
+        <div class="flex flex-col items-center justify-center p-4 text-center hover:bg-[#CAFF00] transition-colors cursor-default">
+          <div class="text-3xl font-bold text-[#0A0A0A]">{n}</div>
+          <div class="text-[10px] font-bold uppercase tracking-widest text-[#6B6B6B] mt-1">{l}</div>
+        </div>
+      {/each}
+    </div>
+  </div>
+
+  <!-- Mobile stats row -->
+  <div class="lg:hidden grid grid-cols-4 border-t-2 border-[#0A0A0A] divide-x-2 divide-[#0A0A0A]">
+    {#each [['XX+', 'Lorem'], ['XX+', 'Ipsum'], ['XX+', 'Dolor'], ['XX%', 'Sit']] as [n, l]}
+      <div class="py-5 text-center">
+        <div class="text-xl font-bold">{n}</div>
+        <div class="text-[10px] font-bold uppercase tracking-widest text-[#6B6B6B] mt-0.5">{l}</div>
+      </div>
+    {/each}
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ SERVICES -->
+<section id="services" class="border-b-2 border-[#0A0A0A]">
+  <!-- Section header -->
+  <div class="border-b-2 border-[#0A0A0A] px-6 lg:px-16 py-6 flex items-baseline justify-between max-w-7xl mx-auto w-full">
+    <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-[#6B6B6B]">§ Lorem Ipsum</h2>
+    <span class="text-4xl font-bold uppercase tracking-tighter text-[#0A0A0A]">Dolor Sit</span>
+  </div>
+
+  <div class="max-w-7xl mx-auto w-full divide-y-2 divide-[#0A0A0A]">
+    {#each services as s, i}
+      <div class="grid grid-cols-[4rem_1fr_auto] lg:grid-cols-[6rem_1fr_2fr_auto] items-start gap-0 px-6 lg:px-16 py-8 group hover:bg-[#CAFF00] transition-colors cursor-default border-[#0A0A0A]">
+        <!-- Number -->
+        <span class="text-xs font-bold text-[#6B6B6B] group-hover:text-[#0A0A0A] pt-1">{s.num}</span>
+        <!-- Title -->
+        <h3 class="text-lg lg:text-2xl font-bold uppercase tracking-tight text-[#0A0A0A]">{s.title}</h3>
+        <!-- Desc (hidden on mobile) -->
+        <p class="hidden lg:block text-sm text-[#6B6B6B] group-hover:text-[#0A0A0A] leading-relaxed max-w-md">{s.desc}</p>
+        <!-- Arrow -->
+        <span class="text-[#0A0A0A] font-bold text-lg self-center group-hover:translate-x-1 transition-transform">→</span>
+      </div>
+    {/each}
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ STACK -->
+<section id="stack" class="border-b-2 border-[#0A0A0A]">
+  <div class="border-b-2 border-[#0A0A0A] px-6 lg:px-16 py-6 flex items-baseline justify-between max-w-7xl mx-auto w-full">
+    <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-[#6B6B6B]">§ Ipsum Dolor</h2>
+    <span class="text-4xl font-bold uppercase tracking-tighter text-[#0A0A0A]">Amet Sit</span>
+  </div>
+
+  <div class="max-w-7xl mx-auto w-full px-6 lg:px-16 py-12">
+    <div class="flex flex-wrap gap-3">
+      {#each stack as tech, i}
+        <div class="border-2 border-[#0A0A0A] px-4 py-2 text-xs font-bold uppercase tracking-widest
+          hover:bg-[#0A0A0A] hover:text-[#CAFF00] transition-colors cursor-default
+          {i % 5 === 0 ? 'bg-[#FF3B00] text-[#F2F0E8] border-[#FF3B00] hover:bg-[#0A0A0A] hover:border-[#0A0A0A]' : ''}
+          {i % 7 === 0 ? 'bg-[#CAFF00] border-[#0A0A0A]' : ''}">
+          {tech}
+        </div>
+      {/each}
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ PROJECTS -->
+<section id="projects" class="border-b-2 border-[#0A0A0A]">
+  <div class="border-b-2 border-[#0A0A0A] px-6 lg:px-16 py-6 flex items-baseline justify-between max-w-7xl mx-auto w-full">
+    <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-[#6B6B6B]">§ Dolor Ipsum</h2>
+    <span class="text-4xl font-bold uppercase tracking-tighter text-[#0A0A0A]">Lorem Sit</span>
+  </div>
+
+  <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-3 divide-y-2 lg:divide-y-0 lg:divide-x-2 divide-[#0A0A0A]">
+    {#each projects as p}
+      <a href="#" class="group block p-8 lg:p-10 hover:bg-[#0A0A0A] transition-colors">
+        <div class="flex items-start justify-between mb-8">
+          <span class="text-xs font-bold text-[#6B6B6B] group-hover:text-[#6B6B6B]">{p.num}</span>
+          <span class="text-xs font-bold text-[#6B6B6B] group-hover:text-[#6B6B6B]">{p.year}</span>
         </div>
 
-        <div class="mt-8 grid grid-cols-2 gap-4">
-          {#each aboutGrid as [label, val]}
-            <div class="bg-[#16161d] border border-[#2a2a38] rounded-lg p-4">
-              <div class="text-xs text-[#8888a0] mb-1">{label}</div>
-              <div class="text-white text-sm font-medium">{val}</div>
-            </div>
+        <h3 class="text-xl font-bold uppercase tracking-tight text-[#0A0A0A] group-hover:text-[#CAFF00] mb-4 leading-tight">{p.title}</h3>
+        <p class="text-sm text-[#6B6B6B] group-hover:text-[#6B6B6B] leading-relaxed mb-8">{p.desc}</p>
+
+        <div class="flex flex-wrap gap-2 mb-6">
+          {#each p.tags as tag}
+            <span class="text-[10px] font-bold uppercase tracking-widest border border-[#0A0A0A] group-hover:border-[#6B6B6B] px-2 py-1 text-[#0A0A0A] group-hover:text-[#6B6B6B]">{tag}</span>
           {/each}
         </div>
+
+        <div class="text-xs font-bold uppercase tracking-widest text-[#0A0A0A] group-hover:text-[#CAFF00] flex items-center gap-2">
+          Lorem Ipsum <span class="group-hover:translate-x-1 transition-transform inline-block">→</span>
+        </div>
+      </a>
+    {/each}
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════════ ABOUT -->
+<section id="about" class="border-b-2 border-[#0A0A0A]">
+  <div class="border-b-2 border-[#0A0A0A] px-6 lg:px-16 py-6 flex items-baseline justify-between max-w-7xl mx-auto w-full">
+    <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-[#6B6B6B]">§ Sit Lorem</h2>
+    <span class="text-4xl font-bold uppercase tracking-tighter text-[#0A0A0A]">Ipsum Dolor</span>
+  </div>
+
+  <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 divide-y-2 lg:divide-y-0 lg:divide-x-2 divide-[#0A0A0A]">
+
+    <!-- Left: bio -->
+    <div class="p-8 lg:p-16">
+      <!-- Avatar block -->
+      <div class="w-24 h-24 border-2 border-[#0A0A0A] bg-[#CAFF00] flex items-center justify-center text-2xl font-bold uppercase mb-8">
+        LI
       </div>
+
+      <div class="space-y-4 text-[#6B6B6B] leading-relaxed text-sm mb-10">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
+        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.</p>
+        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.</p>
+      </div>
+
+      <a href="#contact" class="inline-block bg-[#FF3B00] text-[#F2F0E8] font-bold uppercase text-xs tracking-widest px-6 py-3.5 border-2 border-[#FF3B00] hover:bg-[#0A0A0A] hover:border-[#0A0A0A] transition-colors">
+        Lorem Ipsum →
+      </a>
+    </div>
+
+    <!-- Right: info grid -->
+    <div class="divide-y-2 divide-[#0A0A0A]">
+      {#each [
+        ['Lorem Ipsum', 'Dolor sit amet consectetur'],
+        ['Consectetur', 'Adipiscing elit sed do'],
+        ['Sed Do', 'Eiusmod tempor incididunt'],
+        ['Incididunt', 'Ut labore et dolore'],
+        ['Labore Et', 'Magna aliqua enim ad'],
+        ['Magna Aliqua', 'Minim veniam quis nostrud'],
+      ] as [label, val]}
+        <div class="px-8 py-6 flex items-center justify-between group hover:bg-[#CAFF00] transition-colors">
+          <span class="text-xs font-bold uppercase tracking-widest text-[#6B6B6B]">{label}</span>
+          <span class="text-sm font-bold text-[#0A0A0A]">{val}</span>
+        </div>
+      {/each}
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="py-24 bg-[#16161d]">
-  <div class="max-w-6xl mx-auto px-6">
-    <div class="max-w-2xl mx-auto text-center mb-16">
-      <p class="text-indigo-400 text-sm font-medium uppercase tracking-widest mb-3">Lorem Ipsum</p>
-      <h2 class="text-4xl font-bold text-white mb-4">Dolor Sit Amet Consectetur</h2>
-      <p class="text-[#8888a0]">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      </p>
-    </div>
+<!-- ══════════════════════════════════════════════ CONTACT -->
+<section id="contact" class="border-b-2 border-[#0A0A0A]">
+  <div class="border-b-2 border-[#0A0A0A] px-6 lg:px-16 py-6 flex items-baseline justify-between max-w-7xl mx-auto w-full">
+    <h2 class="text-xs font-bold uppercase tracking-[0.3em] text-[#6B6B6B]">§ Amet Lorem</h2>
+    <span class="text-4xl font-bold uppercase tracking-tighter text-[#0A0A0A]">Dolor Ipsum</span>
+  </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-4xl mx-auto">
-      <div class="space-y-6">
-        {#each contactLinks as item}
-          <a href={item.href} class="flex items-center gap-4 bg-[#1e1e28] border border-[#2a2a38] rounded-xl p-4 hover:border-indigo-500/40 transition-colors group">
-            <div class="text-2xl">{item.icon}</div>
-            <div>
-              <div class="text-xs text-[#8888a0] mb-0.5">{item.label}</div>
-              <div class="text-white text-sm font-medium group-hover:text-indigo-400 transition-colors">{item.val}</div>
-            </div>
+  <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 divide-y-2 lg:divide-y-0 lg:divide-x-2 divide-[#0A0A0A]">
+
+    <!-- Left: CTA + links -->
+    <div class="p-8 lg:p-16 flex flex-col justify-between">
+      <div>
+        <p class="text-[clamp(2rem,5vw,4rem)] font-bold uppercase leading-tight tracking-tighter text-[#0A0A0A] mb-8">
+          Lorem ipsum<br/>dolor sit<br/><span class="text-[#FF3B00]">amet.</span>
+        </p>
+        <p class="text-sm text-[#6B6B6B] leading-relaxed max-w-sm">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.
+        </p>
+      </div>
+
+      <div class="mt-10 space-y-3">
+        {#each [
+          { label: '✉ Lorem', val: 'lorem@ipsum.dolor' },
+          { label: '◈ Ipsum', val: '/in/loremipsum' },
+          { label: '⬡ Dolor', val: 'lorem.ipsum/dolor' },
+        ] as item}
+          <a href="#" class="flex items-center justify-between border-2 border-[#0A0A0A] px-5 py-4 hover:bg-[#0A0A0A] hover:text-[#CAFF00] transition-colors group">
+            <span class="text-xs font-bold uppercase tracking-widest text-[#6B6B6B] group-hover:text-[#CAFF00]">{item.label}</span>
+            <span class="text-xs font-bold text-[#0A0A0A] group-hover:text-[#CAFF00]">{item.val} →</span>
           </a>
         {/each}
       </div>
-
-      <form class="space-y-4" onsubmit={(e) => e.preventDefault()}>
-        <div class="grid grid-cols-2 gap-4">
-          <div>
-            <label class="block text-xs text-[#8888a0] mb-1.5" for="name">Lorem</label>
-            <input id="name" type="text" placeholder="Lorem ipsum" class="w-full bg-[#1e1e28] border border-[#2a2a38] rounded-lg px-4 py-2.5 text-sm text-white placeholder-[#8888a0] focus:border-indigo-500/60 focus:outline-none transition-colors" />
-          </div>
-          <div>
-            <label class="block text-xs text-[#8888a0] mb-1.5" for="email">Ipsum</label>
-            <input id="email" type="email" placeholder="lorem@ipsum.dolor" class="w-full bg-[#1e1e28] border border-[#2a2a38] rounded-lg px-4 py-2.5 text-sm text-white placeholder-[#8888a0] focus:border-indigo-500/60 focus:outline-none transition-colors" />
-          </div>
-        </div>
-        <div>
-          <label class="block text-xs text-[#8888a0] mb-1.5" for="subject">Dolor</label>
-          <input id="subject" type="text" placeholder="Sit amet consectetur" class="w-full bg-[#1e1e28] border border-[#2a2a38] rounded-lg px-4 py-2.5 text-sm text-white placeholder-[#8888a0] focus:border-indigo-500/60 focus:outline-none transition-colors" />
-        </div>
-        <div>
-          <label class="block text-xs text-[#8888a0] mb-1.5" for="message">Amet</label>
-          <textarea id="message" rows="5" placeholder="Lorem ipsum dolor sit amet..." class="w-full bg-[#1e1e28] border border-[#2a2a38] rounded-lg px-4 py-2.5 text-sm text-white placeholder-[#8888a0] focus:border-indigo-500/60 focus:outline-none transition-colors resize-none"></textarea>
-        </div>
-        <button type="submit" class="w-full bg-indigo-500 hover:bg-indigo-600 text-white font-medium py-3 rounded-lg transition-colors">
-          Lorem Ipsum
-        </button>
-      </form>
     </div>
+
+    <!-- Right: form -->
+    <form class="p-8 lg:p-16 space-y-0 divide-y-2 divide-[#0A0A0A] border-t-2 lg:border-t-0 border-[#0A0A0A]"
+      onsubmit={(e) => e.preventDefault()}>
+      {#each [
+        { id: 'name', label: 'Lorem', type: 'text', placeholder: 'Lorem ipsum' },
+        { id: 'email', label: 'Ipsum', type: 'email', placeholder: 'lorem@ipsum.dolor' },
+        { id: 'subject', label: 'Dolor', type: 'text', placeholder: 'Sit amet consectetur' },
+      ] as f}
+        <div class="py-4">
+          <label class="block text-[10px] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-2" for={f.id}>{f.label}</label>
+          <input id={f.id} type={f.type} placeholder={f.placeholder}
+            class="w-full bg-transparent border-0 text-sm font-bold text-[#0A0A0A] placeholder-[#AAAAAA] focus:outline-none py-1" />
+        </div>
+      {/each}
+      <div class="py-4">
+        <label class="block text-[10px] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-2" for="message">Amet</label>
+        <textarea id="message" rows="4" placeholder="Lorem ipsum dolor sit amet..."
+          class="w-full bg-transparent border-0 text-sm font-bold text-[#0A0A0A] placeholder-[#AAAAAA] focus:outline-none py-1 resize-none"></textarea>
+      </div>
+      <div class="pt-6">
+        <button type="submit"
+          class="w-full bg-[#0A0A0A] text-[#CAFF00] font-bold uppercase text-xs tracking-widest py-4 border-2 border-[#0A0A0A] hover:bg-[#CAFF00] hover:text-[#0A0A0A] transition-colors">
+          Lorem Ipsum →
+        </button>
+      </div>
+    </form>
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="border-t border-[#2a2a38] py-8">
-  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
-    <div class="text-[#8888a0] text-sm">© 2026 Lorem Ipsum. Dolor sit amet.</div>
-    <div class="flex gap-6 text-sm text-[#8888a0]">
+<!-- ══════════════════════════════════════════════ FOOTER -->
+<footer class="border-b-2 border-[#0A0A0A]">
+  <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-[1fr_auto] divide-y-2 lg:divide-y-0 lg:divide-x-2 divide-[#0A0A0A]">
+    <div class="px-6 lg:px-16 py-6 flex items-center gap-6">
+      <span class="font-bold text-xl tracking-tighter uppercase">LI<span class="text-[#FF3B00]">.</span></span>
+      <span class="text-xs text-[#6B6B6B] font-bold uppercase tracking-widest">© 2026 Lorem Ipsum. Dolor sit amet.</span>
+    </div>
+    <div class="flex divide-x-2 divide-[#0A0A0A]">
       {#each navItems.slice(0, 4) as item}
-        <a href={item.href} class="hover:text-white transition-colors">{item.label}</a>
+        <a href={item.href}
+          class="px-5 py-6 text-[10px] font-bold uppercase tracking-widest text-[#6B6B6B] hover:text-[#0A0A0A] hover:bg-[#CAFF00] transition-colors">
+          {item.label}
+        </a>
       {/each}
     </div>
   </div>
