@@ -1,0 +1,18 @@
+export const hero = {
+  section:      'border-b-2 border-[#0A0A0A] min-h-[92vh] flex flex-col',
+  topBar:       'border-b-2 border-[#0A0A0A] px-6 py-2 flex items-center justify-between text-[10px] font-bold uppercase tracking-widest text-[#6B6B6B]',
+  pulse:        'w-1.5 h-1.5 rounded-full bg-[#CAFF00] border border-[#0A0A0A] inline-block animate-pulse',
+  grid:         'flex-1 grid grid-cols-1 lg:grid-cols-[1fr_auto] max-w-7xl mx-auto w-full',
+  left:         'p-8 lg:p-16 flex flex-col justify-between border-r-0 lg:border-r-2 border-[#0A0A0A]',
+  eyebrow:      'text-xs font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-6',
+  h1:           'text-[clamp(3rem,10vw,8rem)] font-bold leading-[0.9] tracking-tighter text-[#0A0A0A] uppercase mb-8',
+  h1Accent:     'text-[#FF3B00]',
+  subtext:      'text-base text-[#6B6B6B] max-w-lg leading-relaxed mb-10',
+  btns:         'flex flex-wrap gap-3',
+  statsCol:     'hidden lg:grid grid-rows-4 w-48 border-l-2 border-[#0A0A0A] divide-y-2 divide-[#0A0A0A]',
+  statCell:     'flex flex-col items-center justify-center p-4 text-center hover:bg-[#CAFF00] transition-colors cursor-default',
+  statNum:      'text-3xl font-bold text-[#0A0A0A]',
+  statLabel:    'text-[10px] font-bold uppercase tracking-widest text-[#6B6B6B] mt-1',
+  mobileStats:  'lg:hidden grid grid-cols-4 border-t-2 border-[#0A0A0A] divide-x-2 divide-[#0A0A0A]',
+  mobileCell:   'py-5 text-center',
+};

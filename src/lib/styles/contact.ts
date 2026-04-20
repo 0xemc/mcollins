@@ -1,0 +1,18 @@
+export const contact = {
+  grid:         'max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 divide-y-2 lg:divide-y-0 lg:divide-x-2 divide-[#0A0A0A]',
+  left:         'p-8 lg:p-16 flex flex-col justify-between',
+  headline:     'text-[clamp(2rem,5vw,4rem)] font-bold uppercase leading-tight tracking-tighter text-[#0A0A0A] mb-8',
+  headlineAccent: 'text-[#FF3B00]',
+  subtext:      'text-sm text-[#6B6B6B] leading-relaxed max-w-sm',
+  linkList:     'mt-10 space-y-3',
+  linkItem:     'flex items-center justify-between border-2 border-[#0A0A0A] px-5 py-4 hover:bg-[#0A0A0A] hover:text-[#CAFF00] transition-colors group',
+  linkLabel:    'text-xs font-bold uppercase tracking-widest text-[#6B6B6B] group-hover:text-[#CAFF00]',
+  linkVal:      'text-xs font-bold text-[#0A0A0A] group-hover:text-[#CAFF00]',
+  form:         'p-8 lg:p-16 space-y-0 divide-y-2 divide-[#0A0A0A] border-t-2 lg:border-t-0 border-[#0A0A0A]',
+  fieldWrap:    'py-4',
+  label:        'block text-[10px] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-2',
+  input:        'w-full bg-transparent border-0 text-sm font-bold text-[#0A0A0A] placeholder-[#AAAAAA] focus:outline-none py-1',
+  textarea:     'w-full bg-transparent border-0 text-sm font-bold text-[#0A0A0A] placeholder-[#AAAAAA] focus:outline-none py-1 resize-none',
+  submitWrap:   'pt-6',
+  submit:       'w-full bg-[#0A0A0A] text-[#CAFF00] font-bold uppercase text-xs tracking-widest py-4 border-2 border-[#0A0A0A] hover:bg-[#CAFF00] hover:text-[#0A0A0A] transition-colors',
+};
