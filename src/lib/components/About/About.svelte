@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { bio, infoGrid } from '$lib/constants/about';
-  import { about as s } from '$lib/styles/about';
-  import { shared } from '$lib/styles/tokens';
-  import SectionHeader from './SectionHeader.svelte';
+  import { bio, infoGrid } from './constants';
+  import { about as s } from './styles';
+  import { shared } from '$lib/tokens';
+  import SectionHeader from '../SectionHeader/SectionHeader.svelte';
 </script>
 
 <section id="about" class={shared.sectionWrap}>

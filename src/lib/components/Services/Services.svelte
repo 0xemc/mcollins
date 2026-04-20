@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { services } from '$lib/constants/services';
-  import { services as s } from '$lib/styles/services';
-  import { shared } from '$lib/styles/tokens';
-  import SectionHeader from './SectionHeader.svelte';
+  import { services } from './constants';
+  import { services as s } from './styles';
+  import { shared } from '$lib/tokens';
+  import SectionHeader from '../SectionHeader/SectionHeader.svelte';
 </script>
 
 <section id="services" class={shared.sectionWrap}>

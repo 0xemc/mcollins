@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { projects } from '$lib/constants/projects';
-  import { projects as s } from '$lib/styles/projects';
-  import { shared } from '$lib/styles/tokens';
-  import SectionHeader from './SectionHeader.svelte';
+  import { projects } from './constants';
+  import { projects as s } from './styles';
+  import { shared } from '$lib/tokens';
+  import SectionHeader from '../SectionHeader/SectionHeader.svelte';
 </script>
 
 <section id="projects" class={shared.sectionWrap}>

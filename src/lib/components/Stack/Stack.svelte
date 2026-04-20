@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { stack } from '$lib/constants/stack';
-  import { stack as s } from '$lib/styles/stack';
-  import { shared } from '$lib/styles/tokens';
-  import SectionHeader from './SectionHeader.svelte';
+  import { stack } from './constants';
+  import { stack as s } from './styles';
+  import { shared } from '$lib/tokens';
+  import SectionHeader from '../SectionHeader/SectionHeader.svelte';
 </script>
 
 <section id="stack" class={shared.sectionWrap}>

@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { navItems } from '$lib/constants/nav';
-  import { nav } from '$lib/styles/nav';
+  import { navItems } from './constants';
+  import { nav } from './styles';
 
   let menuOpen = $state(false);
 </script>

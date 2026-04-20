@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { contactLinks, formFields } from '$lib/constants/contact';
-  import { contact as s } from '$lib/styles/contact';
-  import { shared } from '$lib/styles/tokens';
-  import SectionHeader from './SectionHeader.svelte';
+  import { contactLinks, formFields } from './constants';
+  import { contact as s } from './styles';
+  import { shared } from '$lib/tokens';
+  import SectionHeader from '../SectionHeader/SectionHeader.svelte';
 </script>
 
 <section id="contact" class={shared.sectionWrap}>

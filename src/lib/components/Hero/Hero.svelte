@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { stats } from '$lib/constants/hero';
-  import { hero } from '$lib/styles/hero';
-  import { shared } from '$lib/styles/tokens';
+  import { stats } from './constants';
+  import { hero } from './styles';
+  import { shared } from '$lib/tokens';
 </script>
 
 <section id="home" class={hero.section}>

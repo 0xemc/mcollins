@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { shared } from '$lib/styles/tokens';
+  import { shared } from '$lib/tokens';
 
   interface Props {
     label: string;

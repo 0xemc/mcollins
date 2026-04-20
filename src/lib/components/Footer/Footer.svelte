@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { navItems } from '$lib/constants/nav';
-  import { footer as s } from '$lib/styles/footer';
+  import { navItems } from '../Nav/constants';
+  import { footer as s } from './styles';
 </script>
 
 <footer class={s.wrap}>
