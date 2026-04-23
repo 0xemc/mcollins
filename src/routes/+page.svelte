@@ -31,13 +31,18 @@
     <h2 class="section-label">Services</h2>
     <div class="service-grid">
       {#each [
-        { n: '01', title: 'App Development'  },
-        { n: '02', title: 'Blockchain'       },
-        { n: '03', title: 'AI & Automation'  },
+        { n: '01', title: 'App & Web Development', skills: ['TypeScript','React','NextJS','SvelteKit','Express','Tailwind','Supabase'] },
+        { n: '02', title: 'Blockchain',      skills: ['Solidity','Ethers.js','Hardhat','IPFS','Polygon','GraphQL']             },
+        { n: '03', title: 'AI & Automation', skills: ['Python','AWS','OpenClaw','NanoClaw','n8n']                              },
       ] as s}
         <div class="service-item">
           <span class="service-n">{s.n}</span>
           <span class="service-title">{s.title}</span>
+          <div class="service-skills">
+            {#each s.skills as sk}
+              <span class="skill">{sk}</span>
+            {/each}
+          </div>
         </div>
       {/each}
     </div>
@@ -50,12 +55,15 @@
     <h2 class="section-label">Previous Clients</h2>
     <div class="work-grid">
       {#each [
-        { mark: 'CM', logo: '/logos/carbonmark.png', client: 'Carbonmark',        project: 'Tokenized carbon credit marketplace on Polygon' },
-        { mark: 'WW', logo: '/logos/woolworths.png', client: 'Woolworths',         project: 'Real-time pricing & promotions forecasting tool' },
-        { mark: 'AZ', logo: '/logos/amazon.png',     client: 'Amazon',             project: 'Merchant storefront product (US, undisclosed)' },
-        { mark: 'DD', logo: '/logos/deloitte.png',   client: 'Deloitte Digital',   project: 'Enterprise software — banks, insurers, government' },
-        { mark: 'DT', logo: '/logos/transport.png',  client: 'Victorian Dept. of Transport', project: 'Digital twin of Melbourne using spatial frameworks' },
-        { mark: 'AA', logo: '/logos/army.png',       client: 'Australian Army',    project: 'Interactive operations manual (WebGL / PixiJS)' },
+        { mark: 'WW', logo: '/logos/woolworths.svg', client: 'Woolworths',                 project: 'Real-time pricing & promotions forecasting tool' },
+        { mark: 'AZ', logo: '/logos/amazon.svg',     client: 'Amazon',                     project: 'Merchant storefront product (US, undisclosed)' },
+        { mark: 'DD', logo: '/logos/deloitte.svg',   client: 'Deloitte Digital',            project: 'Enterprise software — banks, insurers, government' },
+        { mark: 'DT', logo: '/logos/transport.png',  client: 'Victorian Dept. of Transport',project: 'Digital twin of Melbourne using spatial frameworks' },
+        { mark: 'AA', logo: '/logos/army.svg',       client: 'Australian Army',             project: 'Interactive operations manual (WebGL / PixiJS)' },
+        { mark: 'TH', logo: '/logos/thales.svg',     client: 'Thales ATC',                 project: 'Air traffic control systems software' },
+        { mark: 'BD', logo: '/logos/boxdice.svg',    client: 'Box & Dice',                  project: 'Real estate CRM & property management platform' },
+        { mark: 'QT', logo: '/logos/quantium.svg',   client: 'Quantium',                   project: 'Data science & retail analytics platform' },
+        { mark: 'CM', logo: '/logos/carbonmark.png', client: 'Carbonmark',                  project: 'Tokenized carbon credit marketplace on Polygon' },
       ] as w}
         <div class="work-card">
           <div class="work-mark">
@@ -72,44 +80,6 @@
       {/each}
     </div>
   </section>
-
-  <div class="rule"></div>
-
-  <!-- ── Skills + Experience ──────────────────── -->
-  <div class="lower-grid">
-
-    <div class="col-skills">
-      <h2 class="section-label">Skills</h2>
-      <div class="skill-cloud">
-        {#each ['TypeScript','Python','React','NextJS','SvelteKit','Express','GraphQL','Tailwind','Supabase','AWS','Polygon'] as sk}
-          <span class="skill">{sk}</span>
-        {/each}
-      </div>
-    </div>
-
-    <div class="col-exp">
-      <h2 class="section-label">Experience</h2>
-      <div class="exp-list">
-        {#each [
-          { co: 'Carbonmark',       role: 'Technical Lead',    y: '2023–Now'  },
-          { co: 'Quantium',         role: 'Senior Engineer',   y: '2021–2023' },
-          { co: 'Deloitte Digital', role: 'Senior Consultant', y: '2019–2021' },
-          { co: 'Wanngi',           role: 'Software Engineer', y: '2018–2019' },
-          { co: 'Box & Dice',       role: 'UI Engineer',       y: '2017–2018' },
-          { co: 'Thales ATC',       role: 'Software Engineer', y: '2014–2017' },
-        ] as j}
-          <div class="exp-row">
-            <div class="exp-meta">
-              <span class="exp-co">{j.co}</span>
-              <span class="exp-role">{j.role}</span>
-            </div>
-            <span class="exp-yr">{j.y}</span>
-          </div>
-        {/each}
-      </div>
-    </div>
-
-  </div>
 
   <div class="rule"></div>
 
@@ -323,63 +293,21 @@
     line-height: 1.4;
   }
 
-  /* ── Lower grid ──────────────────────────────── */
-  .lower-grid {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    gap: 56px;
-    align-items: start;
-  }
-
-  /* ── Skills ──────────────────────────────────── */
-  .skill-cloud {
+  /* ── Skills (within service cards) ──────────── */
+  .service-skills {
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 4px;
+    margin-top: 4px;
   }
   .skill {
-    font-size: 0.66rem;
+    font-size: 0.6rem;
     font-weight: 400;
-    color: #888;
-    background: #1f1f1f;
-    border: 1px solid #2a2a2a;
-    padding: 4px 9px;
-    letter-spacing: 0.05em;
-    transition: color 0.15s, border-color 0.15s;
-  }
-  .skill:hover { color: #caff00; border-color: #caff00; }
-
-  /* ── Experience ──────────────────────────────── */
-  .exp-list { border-top: 1px solid #252525; }
-  .exp-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px solid #252525;
-  }
-  .exp-row:hover .exp-co { color: #caff00; }
-  .exp-meta { display: flex; flex-direction: column; gap: 3px; }
-  .exp-co {
-    font-size: 0.82rem;
-    font-weight: 400;
-    color: #d4d4d4;
-    letter-spacing: 0.02em;
-    transition: color 0.15s;
-  }
-  .exp-role {
-    font-size: 0.7rem;
-    font-weight: 300;
     color: #555;
-    letter-spacing: 0.04em;
-  }
-  .exp-yr {
-    font-size: 0.68rem;
-    font-weight: 300;
-    color: #444;
-    letter-spacing: 0.07em;
-    font-variant-numeric: tabular-nums;
-    white-space: nowrap;
+    background: #161616;
+    border: 1px solid #252525;
+    padding: 3px 7px;
+    letter-spacing: 0.05em;
   }
 
   /* ── CTA ─────────────────────────────────────── */
@@ -441,8 +369,7 @@
     .hd            { margin-bottom: 36px; }
     h1             { font-size: 2.2rem; }
     .service-grid  { grid-template-columns: repeat(2, 1fr); }
-    .lower-grid    { grid-template-columns: 1fr; gap: 36px; }
-    .cta           { flex-direction: column; align-items: flex-start; }
+.cta           { flex-direction: column; align-items: flex-start; }
     .cta-right     { align-items: flex-start; }
     .work-grid     { grid-template-columns: repeat(2, 1fr); }
   }
