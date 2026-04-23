@@ -31,6 +31,22 @@
     </div>
   </section>
 
+  <!-- ── CTA ──────────────────────────────────── -->
+  <section class="cta">
+    <div class="cta-left">
+      <p class="cta-heading">Got a project?<br/>Let's talk.</p>
+      <p class="cta-sub">I'm available for contract engagements — short or long term.</p>
+    </div>
+    <div class="cta-right">
+      <a href="mailto:hello@mcoll.net" class="cta-email">hello@mcoll.net</a>
+      <a href="tel:+61429142912" class="cta-phone">+61 429 142 912</a>
+      <div class="cta-links">
+        <a href="https://linkedin.com/in/mcollins92">LinkedIn →</a>
+        <a href="https://github.com/0xemc">GitHub →</a>
+      </div>
+    </div>
+  </section>
+
   <div class="rule"></div>
 
   <!-- ── Services ─────────────────────────────── -->
@@ -88,22 +104,6 @@
     </div>
   </section>
 
-  <div class="rule"></div>
-
-  <!-- ── CTA ──────────────────────────────────── -->
-  <section class="cta">
-    <div class="cta-left">
-      <p class="cta-heading">Got a project?<br/>Let's talk.</p>
-      <p class="cta-sub">I'm available for contract engagements — short or long term.</p>
-    </div>
-    <div class="cta-right">
-      <a href="mailto:hello@mcoll.net" class="cta-email">hello@mcoll.net</a>
-      <div class="cta-links">
-        <a href="https://linkedin.com/in/mcollins92">LinkedIn →</a>
-        <a href="https://github.com/0xemc">GitHub →</a>
-      </div>
-    </div>
-  </section>
 
 </div>
 
@@ -390,6 +390,14 @@
     transition: opacity 0.15s;
   }
   .cta-email:hover { opacity: 0.75; }
+  .cta-phone {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #d4d4d4;
+    letter-spacing: 0.04em;
+    transition: color 0.15s;
+  }
+  .cta-phone:hover { color: #caff00; }
   .cta-links {
     display: flex;
     gap: 16px;
