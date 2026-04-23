@@ -118,7 +118,7 @@
 
   .cursor {
     animation: blink 1.1s step-end infinite;
-    color: #666;
+    color: #caff00;
   }
 
   @keyframes blink {
@@ -129,11 +129,11 @@
   .hd-contact {
     font-size: 0.68rem;
     font-weight: 300;
-    color: #555;
+    color: #666;
     letter-spacing: 0.04em;
     transition: color 0.15s;
   }
-  .hd-contact:hover { color: #d4d4d4; }
+  .hd-contact:hover { color: #caff00; }
 
   /* ── Intro ───────────────────────────────────── */
   .intro {
@@ -163,14 +163,14 @@
     font-weight: 400;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #555;
+    color: #666;
   }
 
   .tagline {
     margin: 0 0 14px;
     font-size: 0.78rem;
     font-weight: 300;
-    color: #777;
+    color: #888;
     letter-spacing: 0.03em;
   }
 
@@ -179,7 +179,7 @@
     font-size: 0.84rem;
     font-weight: 300;
     line-height: 1.75;
-    color: #999;
+    color: #aaa;
     max-width: 580px;
   }
 
@@ -205,7 +205,7 @@
     font-weight: 500;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: #3e3e3e;
+    color: #caff00;
   }
 
   .block {
@@ -218,18 +218,18 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    border-top: 1px solid #222;
+    border-top: 1px solid #252525;
   }
   .offer-list li {
     font-size: 0.78rem;
     font-weight: 300;
-    color: #999;
+    color: #aaa;
     padding: 8px 0;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid #252525;
     letter-spacing: 0.02em;
     transition: color 0.15s;
   }
-  .offer-list li:hover { color: #d4d4d4; }
+  .offer-list li:hover { color: #caff00; }
 
   /* ── Skill cloud ─────────────────────────────── */
   .skill-cloud {
@@ -240,7 +240,7 @@
   .skill {
     font-size: 0.66rem;
     font-weight: 400;
-    color: #777;
+    color: #888;
     background: #1f1f1f;
     border: 1px solid #2a2a2a;
     padding: 4px 9px;
@@ -248,24 +248,23 @@
     transition: color 0.15s, border-color 0.15s;
   }
   .skill:hover {
-    color: #d4d4d4;
-    border-color: #3a3a3a;
+    color: #caff00;
+    border-color: #caff00;
   }
 
   /* ── Experience ──────────────────────────────── */
   .exp-list {
-    border-top: 1px solid #222;
+    border-top: 1px solid #252525;
   }
   .exp-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 13px 0;
-    border-bottom: 1px solid #222;
-    transition: background 0.1s;
+    border-bottom: 1px solid #252525;
   }
-  .exp-row:hover .exp-co   { color: #efefef; }
-  .exp-row:hover .exp-role { color: #999; }
+  .exp-row:hover .exp-co   { color: #caff00; }
+  .exp-row:hover .exp-role { color: #aaa; }
 
   .exp-meta {
     display: flex;
@@ -282,14 +281,14 @@
   .exp-role {
     font-size: 0.7rem;
     font-weight: 300;
-    color: #555;
+    color: #666;
     letter-spacing: 0.04em;
     transition: color 0.15s;
   }
   .exp-yr {
     font-size: 0.68rem;
     font-weight: 300;
-    color: #404040;
+    color: #484848;
     letter-spacing: 0.07em;
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
@@ -307,10 +306,10 @@
     font-family: 'IBM Plex Mono', monospace;
   }
   .ft a {
-    color: #555;
+    color: #666;
     transition: color 0.15s;
   }
-  .ft a:hover { color: #d4d4d4; }
+  .ft a:hover { color: #caff00; }
   .ft-dot { color: #2a2a2a; }
 
   /* ── Responsive ──────────────────────────────── */

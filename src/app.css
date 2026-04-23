@@ -14,6 +14,6 @@ body {
 a { text-decoration: none; }
 
 ::selection {
-  background: #3a3a3a;
-  color: #f0f0f0;
+  background: #caff00;
+  color: #111;
 }
