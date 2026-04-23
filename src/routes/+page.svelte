@@ -56,18 +56,18 @@
     <div class="work-grid">
       {#each [
         { mark: 'WW', logo: '/logos/woolworths.png', client: 'Woolworths',                 project: 'Real-time pricing & promotions forecasting tool' },
-        { mark: 'AZ', logo: '/logos/amazon.svg',     client: 'Amazon',                     project: 'Merchant storefront product (US, undisclosed)' },
+        { mark: 'AZ', logo: '/logos/amazon_white.svg',     client: 'Amazon',                     project: 'Merchant storefront product (US, undisclosed)' },
         { mark: 'DD', logo: '/logos/deloitte.svg',   client: 'Deloitte Digital',            project: 'Enterprise software — banks, insurers, government' },
         { mark: 'DT', logo: '/logos/transport.png',  client: 'Victorian Dept. of Transport',project: 'Digital twin of Melbourne using spatial frameworks' },
         { mark: 'AA', logo: '/logos/army.svg',       client: 'Australian Army',             project: 'Interactive operations manual (WebGL / PixiJS)' },
         { mark: 'TH', logo: '/logos/thales.png',     client: 'Thales ATC',                 project: 'Air traffic control systems software' },
         { mark: 'BD', logo: '/logos/boxdice.png',    client: 'Box & Dice',                  project: 'Real estate CRM & property management platform' },
-        { mark: 'QT', logo: '/logos/quantium.png',   client: 'Quantium',                   project: 'Data science & retail analytics platform' },
+        { mark: 'QT', logo: '/logos/quantium.png',   client: 'Quantium',                   project: 'Data science & retail analytics platform', invert: true },
         { mark: 'CM', logo: '/logos/carbonmark.png', client: 'Carbonmark',                  project: 'Tokenized carbon credit marketplace on Polygon' },
       ] as w}
         <div class="work-card">
           <div class="work-mark">
-            <img src={w.logo} alt={w.client} class="work-logo"
+            <img src={w.logo} alt={w.client} class="work-logo {w.invert ? 'work-logo-invert' : ''}"
               onerror={(e) => { (e.currentTarget as HTMLImageElement).style.display='none'; (e.currentTarget.nextElementSibling as HTMLElement).style.display='flex'; }}
             />
             <span class="work-initials" style="display:none">{w.mark}</span>
@@ -259,6 +259,12 @@
   }
   .work-card:hover .work-logo {
     filter: opacity(1) brightness(1.1);
+  }
+  .work-logo-invert {
+    filter: brightness(0) invert(1) opacity(0.75);
+  }
+  .work-card:hover .work-logo-invert {
+    filter: brightness(0) invert(1) opacity(1);
   }
   .work-initials {
     font-size: 0.6rem;
