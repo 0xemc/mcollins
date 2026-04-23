@@ -19,9 +19,16 @@
 
   <!-- ── Intro ────────────────────────────────── -->
   <section class="intro">
-    <h1><span class="n-light">Michael</span><span class="n-reg">&thinsp;Collins</span></h1>
-    <p class="tagline">Software Engineer &middot; <span class="accent">10+ years experience</span> &middot; Sunshine Coast, AU</p>
-    <p class="bio">Shipping production software across climate tech, defence, finance and government.</p>
+    <div class="intro-title">
+      <div class="hd-photo-wrap">
+        <img src="/me-marseille.png" alt="Michael Collins" class="hd-photo" />
+      </div>
+      <div class="intro-text">
+        <h1><span class="n-light">Michael</span><span class="n-reg">&thinsp;Collins</span></h1>
+        <p class="tagline">Software Engineer &middot; <span class="accent">10+ years experience</span> &middot; Sunshine Coast, AU</p>
+        <p class="bio">Shipping production software across climate tech, defence, finance and government.</p>
+      </div>
+    </div>
   </section>
 
   <div class="rule"></div>
@@ -57,7 +64,7 @@
       {#each [
         { mark: 'WW', logo: '/logos/woolworths.png', client: 'Woolworths',                 project: 'Real-time pricing & promotions forecasting tool' },
         { mark: 'AZ', logo: '/logos/amazon_white.svg',     client: 'Amazon',                     project: 'Merchant storefront product (US, undisclosed)' },
-        { mark: 'DD', logo: '/logos/deloitte.svg',   client: 'Deloitte Digital',            project: 'Enterprise software — banks, insurers, government' },
+        { mark: 'DD', logo: '/logos/deloitte.png',   client: 'Deloitte Digital',            project: 'Enterprise software — banks, insurers, government' },
         { mark: 'DT', logo: '/logos/transport.png',  client: 'Victorian Dept. of Transport',project: 'Digital twin of Melbourne using spatial frameworks' },
         { mark: 'AA', logo: '/logos/army.svg',       client: 'Australian Army',             project: 'Interactive operations manual (WebGL / PixiJS)' },
         { mark: 'TH', logo: '/logos/thales.png',     client: 'Thales ATC',                 project: 'Air traffic control systems software' },
@@ -135,6 +142,32 @@
     0%, 100% { opacity: 1; }
     50%       { opacity: 0; }
   }
+  .intro-title {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 20px;
+  }
+  .intro-text { display: flex; flex-direction: column; gap: 10px; }
+  .intro-text h1 { margin: 0; }
+  .intro-text .tagline { margin: 0; }
+  .intro-text .bio { margin: 0; }
+  .hd-photo-wrap {
+    width: 100px;
+    align-self: stretch;
+    flex-shrink: 0;
+    border: 1px solid #252525;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  .hd-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    filter: grayscale(100%) brightness(0.8) contrast(1.1);
+    display: block;
+  }
   .hd-avail {
     font-size: 0.64rem;
     font-weight: 400;
@@ -147,7 +180,7 @@
   .intro { margin-bottom: 40px; }
 
   h1 {
-    margin: 0 0 10px;
+    margin: 0;
     font-size: clamp(2.2rem, 5.5vw, 3.8rem);
     line-height: 1;
     letter-spacing: -0.025em;
@@ -254,7 +287,8 @@
     height: 26px;
     object-fit: contain;
     display: block;
-    filter: opacity(0.75) brightness(1.2);
+    border-radius: 6px;
+    filter: opacity(0.92) brightness(1.1);
     transition: filter 0.2s;
   }
   .work-card:hover .work-logo {
