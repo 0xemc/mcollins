@@ -20,7 +20,7 @@
   <!-- ── Intro ────────────────────────────────── -->
   <section class="intro">
     <h1><span class="n-light">Michael</span><span class="n-reg">&thinsp;Collins</span></h1>
-    <p class="tagline">Software Engineer &middot; <span class="accent">10+ years experience</span> &middot; Brisbane, AU</p>
+    <p class="tagline">Software Engineer &middot; <span class="accent">10+ years experience</span> &middot; Sunshine Coast, AU</p>
     <p class="bio">Shipping production software across climate tech, defence, finance and government.</p>
   </section>
 
@@ -31,9 +31,9 @@
     <h2 class="section-label">Services</h2>
     <div class="service-grid">
       {#each [
-        { n: '01', title: 'App & Web Development', skills: ['TypeScript','React','NextJS','SvelteKit','Express','Tailwind','Supabase'] },
+        { n: '01', title: 'App Development', skills: ['TypeScript','React','NextJS','SvelteKit','Express','Tailwind','Supabase'] },
         { n: '02', title: 'Blockchain',      skills: ['Solidity','Ethers.js','Hardhat','IPFS','Polygon','GraphQL']             },
-        { n: '03', title: 'AI & Automation', skills: ['Python','AWS','OpenClaw','NanoClaw','n8n']                              },
+        { n: '03', title: 'AI & Business Automation', skills: ['Python','AWS','OpenClaw','NanoClaw','n8n']                              },
       ] as s}
         <div class="service-item">
           <span class="service-n">{s.n}</span>
@@ -55,14 +55,14 @@
     <h2 class="section-label">Previous Clients</h2>
     <div class="work-grid">
       {#each [
-        { mark: 'WW', logo: '/logos/woolworths.svg', client: 'Woolworths',                 project: 'Real-time pricing & promotions forecasting tool' },
+        { mark: 'WW', logo: '/logos/woolworths.png', client: 'Woolworths',                 project: 'Real-time pricing & promotions forecasting tool' },
         { mark: 'AZ', logo: '/logos/amazon.svg',     client: 'Amazon',                     project: 'Merchant storefront product (US, undisclosed)' },
         { mark: 'DD', logo: '/logos/deloitte.svg',   client: 'Deloitte Digital',            project: 'Enterprise software — banks, insurers, government' },
         { mark: 'DT', logo: '/logos/transport.png',  client: 'Victorian Dept. of Transport',project: 'Digital twin of Melbourne using spatial frameworks' },
         { mark: 'AA', logo: '/logos/army.svg',       client: 'Australian Army',             project: 'Interactive operations manual (WebGL / PixiJS)' },
-        { mark: 'TH', logo: '/logos/thales.svg',     client: 'Thales ATC',                 project: 'Air traffic control systems software' },
-        { mark: 'BD', logo: '/logos/boxdice.svg',    client: 'Box & Dice',                  project: 'Real estate CRM & property management platform' },
-        { mark: 'QT', logo: '/logos/quantium.svg',   client: 'Quantium',                   project: 'Data science & retail analytics platform' },
+        { mark: 'TH', logo: '/logos/thales.png',     client: 'Thales ATC',                 project: 'Air traffic control systems software' },
+        { mark: 'BD', logo: '/logos/boxdice.png',    client: 'Box & Dice',                  project: 'Real estate CRM & property management platform' },
+        { mark: 'QT', logo: '/logos/quantium.png',   client: 'Quantium',                   project: 'Data science & retail analytics platform' },
         { mark: 'CM', logo: '/logos/carbonmark.png', client: 'Carbonmark',                  project: 'Tokenized carbon credit marketplace on Polygon' },
       ] as w}
         <div class="work-card">
