@@ -1,3 +1,6 @@
+<script lang="ts">
+</script>
+
 <svelte:head>
   <title>Michael Collins — Software Engineer</title>
   <meta name="description" content="Senior software engineer. 10+ years. Full-stack. Available for contract." />
@@ -8,51 +11,84 @@
 
 <div class="wrap">
 
+  <!-- ── Header ───────────────────────────────── -->
   <header class="hd">
     <span class="hd-logo">MC<span class="cursor">_</span></span>
-    <a href="mailto:hello@mcoll.net" class="hd-contact">hello@mcoll.net</a>
+    <span class="hd-avail">Available for contract</span>
   </header>
 
+  <!-- ── Intro ────────────────────────────────── -->
   <section class="intro">
-    <div class="name-row">
-      <h1><span class="n-light">Michael</span><span class="n-reg">&thinsp;Collins</span></h1>
-      <span class="title-badge">Software Engineer</span>
-    </div>
-    <p class="tagline">10+ years&ensp;&middot;&ensp;Full-stack&ensp;&middot;&ensp;Available for contract.</p>
-    <p class="bio">
-      Shipping production software across climate tech, defence, finance and government.<br />
-      Currently Technical Lead at Carbonmark.
-    </p>
+    <h1><span class="n-light">Michael</span><span class="n-reg">&thinsp;Collins</span></h1>
+    <p class="tagline">Software Engineer &middot; <span class="accent">10+ years experience</span> &middot; Brisbane, AU</p>
+    <p class="bio">Shipping production software across climate tech, defence, finance and government.</p>
   </section>
 
   <div class="rule"></div>
 
-  <div class="grid">
-
-    <div class="col-left">
-
-      <div class="block">
-        <h2 class="block-label">Offer</h2>
-        <ul class="offer-list">
-          {#each ['Full-Stack Dev', 'Technical Lead', 'Web3', 'Backend APIs', 'Enterprise Consulting', 'Climate Tech'] as item}
-            <li>{item}</li>
-          {/each}
-        </ul>
-      </div>
-
-      <div class="block">
-        <h2 class="block-label">Skills</h2>
-        <div class="skill-cloud">
-          {#each ['TypeScript', 'Python', 'React', 'NextJS', 'SvelteKit', 'Express', 'GraphQL', 'Tailwind', 'Supabase', 'AWS', 'Polygon'] as skill}
-            <span class="skill">{skill}</span>
-          {/each}
+  <!-- ── Services ─────────────────────────────── -->
+  <section class="services">
+    <h2 class="section-label">Services</h2>
+    <div class="service-grid">
+      {#each [
+        { n: '01', title: 'App Development'  },
+        { n: '02', title: 'Blockchain'       },
+        { n: '03', title: 'AI & Automation'  },
+      ] as s}
+        <div class="service-item">
+          <span class="service-n">{s.n}</span>
+          <span class="service-title">{s.title}</span>
         </div>
-      </div>
+      {/each}
+    </div>
+  </section>
 
+  <div class="rule"></div>
+
+  <!-- ── Past Work ────────────────────────────── -->
+  <section class="clients">
+    <h2 class="section-label">Past Work</h2>
+    <div class="work-grid">
+      {#each [
+        { mark: 'CM', logo: '/logos/carbonmark.png', client: 'Carbonmark',        project: 'Tokenized carbon credit marketplace on Polygon' },
+        { mark: 'WW', logo: '/logos/woolworths.png', client: 'Woolworths',         project: 'Real-time pricing & promotions forecasting tool' },
+        { mark: 'AZ', logo: '/logos/amazon.png',     client: 'Amazon',             project: 'Merchant storefront product (US, undisclosed)' },
+        { mark: 'DD', logo: '/logos/deloitte.png',   client: 'Deloitte Digital',   project: 'Enterprise software — banks, insurers, government' },
+        { mark: 'DT', logo: '/logos/transport.png',  client: 'Dept. of Transport', project: 'Digital twin of Melbourne using spatial frameworks' },
+        { mark: 'AA', logo: '/logos/army.png',       client: 'Australian Army',    project: 'Interactive operations manual (WebGL / PixiJS)' },
+      ] as w}
+        <div class="work-card">
+          <div class="work-mark">
+            <img src={w.logo} alt={w.client} class="work-logo"
+              onerror={(e) => { (e.currentTarget as HTMLImageElement).style.display='none'; (e.currentTarget.nextElementSibling as HTMLElement).style.display='flex'; }}
+            />
+            <span class="work-initials" style="display:none">{w.mark}</span>
+          </div>
+          <div class="work-body">
+            <span class="work-client">{w.client}</span>
+            <span class="work-project">{w.project}</span>
+          </div>
+        </div>
+      {/each}
+    </div>
+  </section>
+
+  <div class="rule"></div>
+
+  <!-- ── Skills + Experience ──────────────────── -->
+  <div class="lower-grid">
+
+    <div class="col-skills">
+      <h2 class="section-label">Skills</h2>
+      <div class="skill-cloud">
+        {#each ['TypeScript','Python','React','NextJS','SvelteKit','Express','GraphQL','Tailwind','Supabase','AWS','Polygon'] as sk}
+          <span class="skill">{sk}</span>
+        {/each}
+      </div>
     </div>
 
-    <div class="col-right">
-      <h2 class="block-label">Experience</h2>
+    <div class="col-exp">
+      <h2 class="section-label">Experience</h2>
       <div class="exp-list">
         {#each [
           { co: 'Carbonmark',       role: 'Technical Lead',    y: '2023–Now'  },
@@ -77,13 +113,20 @@
 
   <div class="rule"></div>
 
-  <footer class="ft">
-    <a href="mailto:hello@mcoll.net">hello@mcoll.net</a>
-    <span class="ft-dot">&middot;</span>
-    <a href="https://linkedin.com/in/mcollins92">linkedin.com/in/mcollins92</a>
-    <span class="ft-dot">&middot;</span>
-    <a href="https://github.com/0xemc">github.com/0xemc</a>
-  </footer>
+  <!-- ── CTA ──────────────────────────────────── -->
+  <section class="cta">
+    <div class="cta-left">
+      <p class="cta-heading">Got a project?<br/>Let's talk.</p>
+      <p class="cta-sub">I'm available for contract engagements — short or long term.</p>
+    </div>
+    <div class="cta-right">
+      <a href="mailto:hello@mcoll.net" class="cta-email">hello@mcoll.net</a>
+      <div class="cta-links">
+        <a href="https://linkedin.com/in/mcollins92">LinkedIn →</a>
+        <a href="https://github.com/0xemc">GitHub →</a>
+      </div>
+    </div>
+  </section>
 
 </div>
 
@@ -92,7 +135,7 @@
     font-family: 'IBM Plex Mono', monospace;
     max-width: 900px;
     margin: 0 auto;
-    padding: 36px 44px 52px;
+    padding: 36px 44px 64px;
     animation: fadein 0.4s ease both;
   }
 
@@ -108,48 +151,33 @@
     align-items: center;
     margin-bottom: 52px;
   }
-
   .hd-logo {
     font-size: 0.72rem;
     font-weight: 500;
     letter-spacing: 0.1em;
     color: #efefef;
   }
-
   .cursor {
     animation: blink 1.1s step-end infinite;
     color: #caff00;
   }
-
   @keyframes blink {
     0%, 100% { opacity: 1; }
     50%       { opacity: 0; }
   }
-
-  .hd-contact {
-    font-size: 0.68rem;
-    font-weight: 300;
-    color: #666;
-    letter-spacing: 0.04em;
-    transition: color 0.15s;
+  .hd-avail {
+    font-size: 0.64rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #caff00;
   }
-  .hd-contact:hover { color: #caff00; }
 
   /* ── Intro ───────────────────────────────────── */
-  .intro {
-    margin-bottom: 40px;
-  }
-
-  .name-row {
-    display: flex;
-    align-items: baseline;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 14px;
-  }
+  .intro { margin-bottom: 40px; }
 
   h1 {
-    margin: 0;
+    margin: 0 0 10px;
     font-size: clamp(2.2rem, 5.5vw, 3.8rem);
     line-height: 1;
     letter-spacing: -0.025em;
@@ -158,29 +186,22 @@
   .n-light { font-weight: 300; }
   .n-reg   { font-weight: 400; }
 
-  .title-badge {
-    font-size: 0.68rem;
-    font-weight: 400;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: #666;
-  }
+  .accent  { color: #caff00; font-weight: 400; }
 
   .tagline {
     margin: 0 0 14px;
-    font-size: 0.78rem;
+    font-size: 0.72rem;
     font-weight: 300;
-    color: #888;
-    letter-spacing: 0.03em;
+    color: #666;
+    letter-spacing: 0.04em;
   }
-
   .bio {
     margin: 0;
     font-size: 0.84rem;
     font-weight: 300;
     line-height: 1.75;
     color: #aaa;
-    max-width: 580px;
+    max-width: 560px;
   }
 
   /* ── Rule ────────────────────────────────────── */
@@ -190,17 +211,9 @@
     margin: 36px 0;
   }
 
-  /* ── Two-column grid ─────────────────────────── */
-  .grid {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    gap: 56px;
-    align-items: start;
-  }
-
-  /* ── Block label ─────────────────────────────── */
-  .block-label {
-    margin: 0 0 14px;
+  /* ── Section label ───────────────────────────── */
+  .section-label {
+    margin: 0 0 18px;
     font-size: 0.6rem;
     font-weight: 500;
     letter-spacing: 0.22em;
@@ -208,30 +221,114 @@
     color: #caff00;
   }
 
-  .block {
-    margin-bottom: 36px;
-  }
-  .block:last-child { margin-bottom: 0; }
-
-  /* ── Offer list ──────────────────────────────── */
-  .offer-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  /* ── Services ────────────────────────────────── */
+  .service-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
     border-top: 1px solid #252525;
+    border-left: 1px solid #252525;
   }
-  .offer-list li {
-    font-size: 0.78rem;
-    font-weight: 300;
-    color: #aaa;
-    padding: 8px 0;
+  .service-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 18px;
+    border-right: 1px solid #252525;
     border-bottom: 1px solid #252525;
+    transition: background 0.15s;
+  }
+  .service-item:hover { background: #1f1f1f; }
+  .service-n {
+    font-size: 0.6rem;
+    font-weight: 500;
+    color: #caff00;
+    letter-spacing: 0.1em;
+  }
+  .service-title {
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: #d4d4d4;
+    letter-spacing: 0.01em;
+    line-height: 1.3;
+  }
+
+  /* ── Past Work ───────────────────────────────── */
+  .work-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #252525;
+    border: 1px solid #252525;
+  }
+  .work-card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    background: #181818;
+    transition: background 0.15s;
+  }
+  .work-card:hover { background: #1f1f1f; }
+  .work-card:hover .work-client { color: #caff00; }
+  .work-mark {
+    background: #f0f0f0;
+    border: 1px solid #2a2a2a;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: background 0.15s;
+  }
+  .work-logo {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+  }
+  .work-initials {
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: #caff00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  .work-card:hover .work-mark { background: #fff; }
+  .work-body {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  .work-client {
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #d4d4d4;
     letter-spacing: 0.02em;
     transition: color 0.15s;
   }
-  .offer-list li:hover { color: #caff00; }
+  .work-project {
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: #555;
+    letter-spacing: 0.02em;
+    line-height: 1.4;
+  }
 
-  /* ── Skill cloud ─────────────────────────────── */
+  /* ── Lower grid ──────────────────────────────── */
+  .lower-grid {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+
+  /* ── Skills ──────────────────────────────────── */
   .skill-cloud {
     display: flex;
     flex-wrap: wrap;
@@ -247,30 +344,19 @@
     letter-spacing: 0.05em;
     transition: color 0.15s, border-color 0.15s;
   }
-  .skill:hover {
-    color: #caff00;
-    border-color: #caff00;
-  }
+  .skill:hover { color: #caff00; border-color: #caff00; }
 
   /* ── Experience ──────────────────────────────── */
-  .exp-list {
-    border-top: 1px solid #252525;
-  }
+  .exp-list { border-top: 1px solid #252525; }
   .exp-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 13px 0;
+    padding: 12px 0;
     border-bottom: 1px solid #252525;
   }
-  .exp-row:hover .exp-co   { color: #caff00; }
-  .exp-row:hover .exp-role { color: #aaa; }
-
-  .exp-meta {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-  }
+  .exp-row:hover .exp-co { color: #caff00; }
+  .exp-meta { display: flex; flex-direction: column; gap: 3px; }
   .exp-co {
     font-size: 0.82rem;
     font-weight: 400;
@@ -281,44 +367,84 @@
   .exp-role {
     font-size: 0.7rem;
     font-weight: 300;
-    color: #666;
+    color: #555;
     letter-spacing: 0.04em;
-    transition: color 0.15s;
   }
   .exp-yr {
     font-size: 0.68rem;
     font-weight: 300;
-    color: #484848;
+    color: #444;
     letter-spacing: 0.07em;
     font-variant-numeric: tabular-nums;
     white-space: nowrap;
   }
 
-  /* ── Footer ──────────────────────────────────── */
-  .ft {
+  /* ── CTA ─────────────────────────────────────── */
+  .cta {
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    align-items: center;
-    font-size: 0.68rem;
-    font-weight: 300;
-    letter-spacing: 0.04em;
-    font-family: 'IBM Plex Mono', monospace;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 40px;
+    padding: 32px;
+    border: 1px solid #2a2a2a;
+    background: #1a1a1a;
   }
-  .ft a {
+  .cta-heading {
+    margin: 0 0 10px;
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: #efefef;
+    line-height: 1.2;
+  }
+  .cta-sub {
+    margin: 0;
+    font-size: 0.75rem;
+    font-weight: 300;
     color: #666;
+    letter-spacing: 0.02em;
+  }
+  .cta-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+  .cta-email {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    font-weight: 400;
+    color: #caff00;
+    letter-spacing: 0.02em;
+    transition: opacity 0.15s;
+  }
+  .cta-email:hover { opacity: 0.75; }
+  .cta-links {
+    display: flex;
+    gap: 16px;
+  }
+  .cta-links a {
+    font-size: 0.7rem;
+    font-weight: 300;
+    color: #555;
+    letter-spacing: 0.05em;
     transition: color 0.15s;
   }
-  .ft a:hover { color: #caff00; }
-  .ft-dot { color: #2a2a2a; }
+  .cta-links a:hover { color: #caff00; }
 
   /* ── Responsive ──────────────────────────────── */
-  @media (max-width: 620px) {
-    .wrap    { padding: 24px 20px 44px; }
-    .hd      { margin-bottom: 36px; }
-    .name-row { flex-direction: column; gap: 6px; }
-    h1       { font-size: 2.2rem; }
-    .grid    { grid-template-columns: 1fr; gap: 36px; }
-    .ft      { flex-direction: column; align-items: flex-start; gap: 8px; }
+  @media (max-width: 680px) {
+    .wrap          { padding: 24px 20px 48px; }
+    .hd            { margin-bottom: 36px; }
+    h1             { font-size: 2.2rem; }
+    .service-grid  { grid-template-columns: repeat(2, 1fr); }
+    .lower-grid    { grid-template-columns: 1fr; gap: 36px; }
+    .cta           { flex-direction: column; align-items: flex-start; }
+    .cta-right     { align-items: flex-start; }
+    .work-grid     { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 400px) {
+    .service-grid { grid-template-columns: 1fr; }
   }
 </style>
