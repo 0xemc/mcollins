@@ -35,7 +35,7 @@
   <section class="cta">
     <div class="cta-left">
       <p class="cta-heading">Got a project?<br/>Let's talk.</p>
-      <p class="cta-sub">I'm available for contract engagements — short or long term.</p>
+      <p class="cta-sub">Currently available for short or long contract engagements.</p>
     </div>
     <div class="cta-right">
       <a href="mailto:hello@mcoll.net" class="cta-email">hello@mcoll.net</a>
@@ -104,6 +104,21 @@
     </div>
   </section>
 
+  <!-- ── Mobile CTA ───────────────────────────── -->
+  <section class="cta cta-mobile">
+    <div class="cta-left">
+      <p class="cta-heading">Ready to build<br/>something?</p>
+      <p class="cta-sub">Drop me a line — I'm open to new contract work.</p>
+    </div>
+    <div class="cta-right">
+      <a href="mailto:hello@mcoll.net" class="cta-email">hello@mcoll.net</a>
+      <a href="tel:+61429142912" class="cta-phone">+61 429 142 912</a>
+      <div class="cta-links">
+        <a href="https://linkedin.com/in/mcollins92">LinkedIn →</a>
+        <a href="https://github.com/0xemc">GitHub →</a>
+      </div>
+    </div>
+  </section>
 
 </div>
 
@@ -411,15 +426,23 @@
   }
   .cta-links a:hover { color: #caff00; }
 
+  .cta-mobile { display: none; }
+
   /* ── Responsive ──────────────────────────────── */
   @media (max-width: 680px) {
     .wrap          { padding: 24px 20px 48px; }
     .hd            { margin-bottom: 36px; }
     h1             { font-size: 2.2rem; }
+    .hd-photo-wrap { width: 72px; height: 72px; align-self: flex-start; }
     .service-grid  { grid-template-columns: repeat(2, 1fr); }
 .cta           { flex-direction: column; align-items: flex-start; }
     .cta-right     { align-items: flex-start; }
-    .work-grid     { grid-template-columns: repeat(2, 1fr); }
+    .work-grid     { display: flex; flex-direction: column; gap: 0; background: none; border: none; border-top: 1px solid #252525; }
+    .work-card     { flex-direction: row; align-items: center; gap: 14px; padding: 14px 0; background: none; border-bottom: 1px solid #252525; border-radius: 0; }
+    .work-mark     { width: 28px; height: 28px; flex-shrink: 0; }
+    .work-logo     { width: 20px; height: 20px; }
+    .work-body     { flex: 1; gap: 3px; }
+    .cta-mobile    { display: flex; margin-top: 36px; }
   }
 
   @media (max-width: 400px) {
