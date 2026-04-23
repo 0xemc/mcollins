@@ -193,17 +193,17 @@
 
   .tagline {
     margin: 0 0 14px;
-    font-size: 0.72rem;
+    font-size: 0.76rem;
     font-weight: 300;
-    color: #666;
+    color: #999;
     letter-spacing: 0.04em;
   }
   .bio {
     margin: 0;
-    font-size: 0.84rem;
+    font-size: 0.88rem;
     font-weight: 300;
     line-height: 1.75;
-    color: #aaa;
+    color: #bbb;
     max-width: 560px;
   }
 
@@ -249,9 +249,9 @@
     letter-spacing: 0.1em;
   }
   .service-title {
-    font-size: 0.82rem;
+    font-size: 0.9rem;
     font-weight: 400;
-    color: #d4d4d4;
+    color: #e0e0e0;
     letter-spacing: 0.01em;
     line-height: 1.3;
   }
@@ -319,16 +319,16 @@
     gap: 5px;
   }
   .work-client {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     font-weight: 400;
-    color: #d4d4d4;
+    color: #e0e0e0;
     letter-spacing: 0.02em;
     transition: color 0.15s;
   }
   .work-project {
-    font-size: 0.7rem;
+    font-size: 0.74rem;
     font-weight: 300;
-    color: #999;
+    color: #aaa;
     letter-spacing: 0.02em;
     line-height: 1.4;
   }
@@ -341,9 +341,9 @@
     margin-top: 4px;
   }
   .skill {
-    font-size: 0.6rem;
+    font-size: 0.62rem;
     font-weight: 400;
-    color: #555;
+    color: #777;
     background: #161616;
     border: 1px solid #252525;
     padding: 3px 7px;
@@ -370,9 +370,9 @@
   }
   .cta-sub {
     margin: 0;
-    font-size: 0.75rem;
+    font-size: 0.78rem;
     font-weight: 300;
-    color: #666;
+    color: #999;
     letter-spacing: 0.02em;
   }
   .cta-right {
@@ -403,9 +403,9 @@
     gap: 16px;
   }
   .cta-links a {
-    font-size: 0.7rem;
+    font-size: 0.72rem;
     font-weight: 300;
-    color: #555;
+    color: #888;
     letter-spacing: 0.05em;
     transition: color 0.15s;
   }
