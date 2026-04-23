@@ -47,14 +47,14 @@
 
   <!-- ── Past Work ────────────────────────────── -->
   <section class="clients">
-    <h2 class="section-label">Past Work</h2>
+    <h2 class="section-label">Previous Clients</h2>
     <div class="work-grid">
       {#each [
         { mark: 'CM', logo: '/logos/carbonmark.png', client: 'Carbonmark',        project: 'Tokenized carbon credit marketplace on Polygon' },
         { mark: 'WW', logo: '/logos/woolworths.png', client: 'Woolworths',         project: 'Real-time pricing & promotions forecasting tool' },
         { mark: 'AZ', logo: '/logos/amazon.png',     client: 'Amazon',             project: 'Merchant storefront product (US, undisclosed)' },
         { mark: 'DD', logo: '/logos/deloitte.png',   client: 'Deloitte Digital',   project: 'Enterprise software — banks, insurers, government' },
-        { mark: 'DT', logo: '/logos/transport.png',  client: 'Dept. of Transport', project: 'Digital twin of Melbourne using spatial frameworks' },
+        { mark: 'DT', logo: '/logos/transport.png',  client: 'Victorian Dept. of Transport', project: 'Digital twin of Melbourne using spatial frameworks' },
         { mark: 'AA', logo: '/logos/army.png',       client: 'Australian Army',    project: 'Interactive operations manual (WebGL / PixiJS)' },
       ] as w}
         <div class="work-card">
@@ -272,34 +272,37 @@
   .work-card:hover { background: #1f1f1f; }
   .work-card:hover .work-client { color: #caff00; }
   .work-mark {
-    background: #f0f0f0;
-    border: 1px solid #2a2a2a;
     width: 40px;
     height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-    transition: background 0.15s;
   }
   .work-logo {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
     object-fit: contain;
     display: block;
+    filter: opacity(0.75) brightness(1.2);
+    transition: filter 0.2s;
+  }
+  .work-card:hover .work-logo {
+    filter: opacity(1) brightness(1.1);
   }
   .work-initials {
     font-size: 0.6rem;
     font-weight: 500;
     letter-spacing: 0.1em;
-    color: #caff00;
+    color: #555;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 100%;
+    transition: color 0.15s;
   }
-  .work-card:hover .work-mark { background: #fff; }
+  .work-card:hover .work-initials { color: #caff00; }
   .work-body {
     display: flex;
     flex-direction: column;
@@ -315,7 +318,7 @@
   .work-project {
     font-size: 0.7rem;
     font-weight: 300;
-    color: #555;
+    color: #999;
     letter-spacing: 0.02em;
     line-height: 1.4;
   }
