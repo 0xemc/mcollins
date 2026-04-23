@@ -1,14 +1,14 @@
 export const bio: string[] = [
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.',
-  'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit.',
-  'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint.',
+  "Hi, I'm Michael — a software engineer with 10+ years of industry experience. I thrive on bringing concepts to reality and solving difficult problems alongside great people.",
+  "I've shipped production software across defence, government, finance, retail and climate tech — from Air Traffic Control systems and Digital Twins to carbon credit marketplaces and sales prediction tools.",
+  "Currently Technical Lead at Carbonmark, building an open marketplace for tokenized voluntary carbon credits on the Polygon blockchain.",
 ];
 
 export const infoGrid: [string, string][] = [
-  ['Lorem Ipsum',  'Dolor sit amet consectetur'],
-  ['Consectetur',  'Adipiscing elit sed do'],
-  ['Sed Do',       'Eiusmod tempor incididunt'],
-  ['Incididunt',   'Ut labore et dolore'],
-  ['Labore Et',    'Magna aliqua enim ad'],
-  ['Magna Aliqua', 'Minim veniam quis nostrud'],
+  ['Carbonmark',     'Technical Lead · 2023–Now'],
+  ['Quantium',       'Senior Engineer · 2021–2023'],
+  ['Deloitte Digital','Senior Consultant · 2019–2021'],
+  ['Wanngi',         'Software Engineer · 2018–2019'],
+  ['Box & Dice',     'UI Engineer · 2017–2018'],
+  ['Thales ATC',     'Software Engineer · 2014–2017'],
 ];

@@ -8,7 +8,7 @@
 <header class={nav.header}>
   <nav class={nav.inner}>
     <a href="#home" class={nav.logo}>
-      LI<span class="text-[#CAFF00] [-webkit-text-stroke:1px_#0A0A0A]">.</span>
+      MC<span class="text-[#CAFF00] [-webkit-text-stroke:1px_#0A0A0A]">.</span>
     </a>
 
     <ul class={nav.desktopList}>
@@ -19,7 +19,7 @@
       {/each}
     </ul>
 
-    <a href="#contact" class={nav.cta}>Lorem →</a>
+    <a href="#contact" class={nav.cta}>Hire Me →</a>
 
     <button class={nav.burger} onclick={() => menuOpen = !menuOpen} aria-label="Toggle menu">
       {menuOpen ? 'Close' : 'Menu'}
@@ -33,7 +33,7 @@
           {item.label}
         </a>
       {/each}
-      <a href="#contact" class={nav.mobileCta}>Lorem →</a>
+      <a href="#contact" class={nav.mobileCta}>Hire Me →</a>
     </div>
   {/if}
 </header>

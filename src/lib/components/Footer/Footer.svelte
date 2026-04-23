@@ -6,8 +6,8 @@
 <footer class={s.wrap}>
   <div class={s.inner}>
     <div class={s.left}>
-      <span class={s.logo}>LI<span class="text-[#FF3B00]">.</span></span>
-      <span class={s.copy}>© 2026 Lorem Ipsum. Dolor sit amet.</span>
+      <span class={s.logo}>MC<span class="text-[#FF3B00]">.</span></span>
+      <span class={s.copy}>© 2026 Michael Collins.</span>
     </div>
     <div class={s.links}>
       {#each navItems.slice(0, 4) as item}

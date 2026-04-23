@@ -6,7 +6,7 @@
 </script>
 
 <section id="services" class={shared.sectionWrap}>
-  <SectionHeader label="Lorem Ipsum" title="Dolor Sit" />
+  <SectionHeader label="What I Do" title="Services" />
 
   <div class={s.list}>
     {#each services as service}

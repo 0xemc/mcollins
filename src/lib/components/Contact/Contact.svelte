@@ -6,18 +6,18 @@
 </script>
 
 <section id="contact" class={shared.sectionWrap}>
-  <SectionHeader label="Amet Lorem" title="Dolor Ipsum" />
+  <SectionHeader label="Get In Touch" title="Let's Work Together" />
 
   <div class={s.grid}>
     <!-- CTA + contact links -->
     <div class={s.left}>
       <div>
         <p class={s.headline}>
-          Lorem ipsum<br/>dolor sit<br/><span class={s.headlineAccent}>amet.</span>
+          Let's build<br/>something<br/><span class={s.headlineAccent}>great.</span>
         </p>
         <p class={s.subtext}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
-          incididunt ut labore et dolore magna.
+          Looking for a senior engineer or technical lead for your next project?
+          I'm available for contract work and open to discussing what you're building.
         </p>
       </div>
       <div class={s.linkList}>
@@ -39,12 +39,12 @@
         </div>
       {/each}
       <div class={s.fieldWrap}>
-        <label class={s.label} for="message">Amet</label>
-        <textarea id="message" rows="4" placeholder="Lorem ipsum dolor sit amet..."
+        <label class={s.label} for="message">Message</label>
+        <textarea id="message" rows="4" placeholder="Tell me about your project..."
           class={s.textarea}></textarea>
       </div>
       <div class={s.submitWrap}>
-        <button type="submit" class={s.submit}>Lorem Ipsum →</button>
+        <button type="submit" class={s.submit}>Send Message →</button>
       </div>
     </form>
   </div>

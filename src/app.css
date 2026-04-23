@@ -1,42 +1,19 @@
 @import "tailwindcss";
 
-@theme {
-  --font-sans: 'Space Grotesk', 'Inter', system-ui, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Courier New', monospace;
+*, *::before, *::after { box-sizing: border-box; }
 
-  /* Brutalist palette */
-  --color-ink:     #0A0A0A;
-  --color-paper:   #F2F0E8;
-  --color-acid:    #CAFF00;   /* lime accent */
-  --color-hot:     #FF3B00;   /* hot orange-red */
-  --color-muted:   #6B6B6B;
-  --color-border:  #0A0A0A;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background-color: var(--color-paper);
-  color: var(--color-ink);
-  font-family: var(--font-sans);
+  background: #181818;
+  color: #d4d4d4;
+  margin: 0;
   -webkit-font-smoothing: antialiased;
 }
 
-/* Brutalist link underline */
 a { text-decoration: none; }
 
-/* Thick border utility */
-.b { border: 2px solid var(--color-ink); }
-.b3 { border: 3px solid var(--color-ink); }
-
-/* Selection color */
 ::selection {
-  background: #CAFF00;
-  color: #0A0A0A;
+  background: #3a3a3a;
+  color: #f0f0f0;
 }

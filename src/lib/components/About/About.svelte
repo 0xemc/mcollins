@@ -6,18 +6,18 @@
 </script>
 
 <section id="about" class={shared.sectionWrap}>
-  <SectionHeader label="Sit Lorem" title="Ipsum Dolor" />
+  <SectionHeader label="Background" title="Experience" />
 
   <div class={s.grid}>
     <!-- Bio column -->
     <div class={s.left}>
-      <div class={s.avatar}>LI</div>
+      <div class={s.avatar}>MC</div>
       <div class={s.bio}>
         {#each bio as paragraph}
           <p>{paragraph}</p>
         {/each}
       </div>
-      <a href="#contact" class={shared.btnHot}>Lorem Ipsum →</a>
+      <a href="#contact" class={shared.btnHot}>Work With Me →</a>
     </div>
 
     <!-- Info grid column -->

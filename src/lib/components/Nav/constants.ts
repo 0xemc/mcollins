@@ -1,7 +1,6 @@
 export const navItems = [
-  { label: 'Lorem', href: '#services' },
-  { label: 'Ipsum', href: '#stack' },
-  { label: 'Dolor', href: '#projects' },
-  { label: 'Sit',   href: '#about' },
-  { label: 'Amet',  href: '#contact' },
+  { label: 'Offer',      href: '#services' },
+  { label: 'Skills',     href: '#stack' },
+  { label: 'Experience', href: '#about' },
+  { label: 'Contact',    href: '#contact' },
 ];

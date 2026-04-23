@@ -6,9 +6,9 @@ export interface ContactLink {
 }
 
 export const contactLinks: ContactLink[] = [
-  { icon: '✉', label: 'Lorem', val: 'lorem@ipsum.dolor',  href: 'mailto:lorem@ipsum.dolor' },
-  { icon: '◈', label: 'Ipsum', val: '/in/loremipsum',     href: '#' },
-  { icon: '⬡', label: 'Dolor', val: 'lorem.ipsum/dolor',  href: '#' },
+  { icon: '✉', label: 'Email',    val: 'hello@mcoll.net',   href: 'mailto:hello@mcoll.net' },
+  { icon: '◈', label: 'LinkedIn', val: '/in/mcollins92',    href: 'https://linkedin.com/in/mcollins92' },
+  { icon: '⬡', label: 'GitHub',   val: '0xemc',             href: 'https://github.com/0xemc' },
 ];
 
 export interface FormField {
@@ -19,7 +19,7 @@ export interface FormField {
 }
 
 export const formFields: FormField[] = [
-  { id: 'name',    label: 'Lorem', type: 'text',  placeholder: 'Lorem ipsum' },
-  { id: 'email',   label: 'Ipsum', type: 'email', placeholder: 'lorem@ipsum.dolor' },
-  { id: 'subject', label: 'Dolor', type: 'text',  placeholder: 'Sit amet consectetur' },
+  { id: 'name',    label: 'Name',    type: 'text',  placeholder: 'Your name' },
+  { id: 'email',   label: 'Email',   type: 'email', placeholder: 'hello@you.com' },
+  { id: 'subject', label: 'Subject', type: 'text',  placeholder: "What are you working on?" },
 ];

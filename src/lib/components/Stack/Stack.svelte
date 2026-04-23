@@ -6,7 +6,7 @@
 </script>
 
 <section id="stack" class={shared.sectionWrap}>
-  <SectionHeader label="Ipsum Dolor" title="Amet Sit" />
+  <SectionHeader label="Tools & Tech" title="Skills" />
 
   <div class={s.body}>
     <div class={s.tags}>
