@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="preload" href="/me-marseille.png" as="image" />
 </svelte:head>
 
 <div class="wrap">
@@ -14,19 +15,19 @@
   <!-- ── Header ───────────────────────────────── -->
   <header class="hd">
     <span class="hd-logo">MC<span class="cursor">_</span></span>
-    <span class="hd-avail">Available for contract</span>
+    <a href="mailto:hello@mcoll.net" class="hd-avail">Available for contract</a>
   </header>
 
   <!-- ── Intro ────────────────────────────────── -->
   <section class="intro">
     <div class="intro-title">
       <div class="hd-photo-wrap">
-        <img src="/me-marseille.png" alt="Michael Collins" class="hd-photo" />
+        <img src="/me-marseille.png" alt="Michael Collins" class="hd-photo" fetchpriority="high" />
       </div>
       <div class="intro-text">
         <h1><span class="n-light">Michael</span><span class="n-reg">&thinsp;Collins</span></h1>
-        <p class="tagline">Software Engineer &middot; <span class="accent">10+ years experience</span> &middot; Sunshine Coast, AU</p>
-        <p class="bio">Shipping production software across climate tech, defence, finance and government.</p>
+        <p class="tagline">Software Engineer &middot; <span class="accent">10+ years experience</span></p>
+        <p class="bio">Delivering fullstack software for climate, defence, finance and government.</p>
       </div>
     </div>
   </section>
@@ -35,14 +36,13 @@
   <section class="cta">
     <div class="cta-left">
       <p class="cta-heading">Got a project?<br/>Let's talk.</p>
-      <p class="cta-sub">Currently available for short or long contract engagements.</p>
     </div>
     <div class="cta-right">
       <a href="mailto:hello@mcoll.net" class="cta-email">hello@mcoll.net</a>
       <a href="tel:+61429142912" class="cta-phone">+61 429 142 912</a>
       <div class="cta-links">
-        <a href="https://linkedin.com/in/mcollins92">LinkedIn →</a>
-        <a href="https://github.com/0xemc">GitHub →</a>
+        <a href="https://linkedin.com/in/mcollins92"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+        <a href="https://github.com/0xemc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg> GitHub</a>
       </div>
     </div>
   </section>
@@ -75,7 +75,7 @@
 
   <!-- ── Past Work ────────────────────────────── -->
   <section class="clients">
-    <h2 class="section-label">Previous Clients</h2>
+    <h2 class="section-label">Previous Work</h2>
     <div class="work-grid">
       {#each [
         { mark: 'WW', logo: '/logos/woolworths.png', client: 'Woolworths',                 project: 'Real-time pricing & promotions forecasting tool' },
@@ -114,8 +114,8 @@
       <a href="mailto:hello@mcoll.net" class="cta-email">hello@mcoll.net</a>
       <a href="tel:+61429142912" class="cta-phone">+61 429 142 912</a>
       <div class="cta-links">
-        <a href="https://linkedin.com/in/mcollins92">LinkedIn →</a>
-        <a href="https://github.com/0xemc">GitHub →</a>
+        <a href="https://linkedin.com/in/mcollins92"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg> LinkedIn</a>
+        <a href="https://github.com/0xemc"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="13" height="13"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg> GitHub</a>
       </div>
     </div>
   </section>
@@ -189,7 +189,10 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: #caff00;
+    text-decoration: none;
+    transition: opacity 0.15s;
   }
+  .hd-avail:hover { opacity: 0.75; }
 
   /* ── Intro ───────────────────────────────────── */
   .intro { margin-bottom: 40px; }
@@ -418,6 +421,9 @@
     gap: 16px;
   }
   .cta-links a {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     font-size: 0.72rem;
     font-weight: 300;
     color: #888;
@@ -425,6 +431,7 @@
     transition: color 0.15s;
   }
   .cta-links a:hover { color: #caff00; }
+  .cta-links svg { flex-shrink: 0; }
 
   .cta-mobile { display: none; }
 
