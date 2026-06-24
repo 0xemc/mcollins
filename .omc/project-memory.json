@@ -1,0 +1,120 @@
+{
+  "version": "1.0.0",
+  "lastScanned": 1782269934081,
+  "projectRoot": "/home/xemc/apps/mcollins",
+  "techStack": {
+    "languages": [
+      {
+        "name": "JavaScript/TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "package.json"
+        ]
+      },
+      {
+        "name": "TypeScript",
+        "version": null,
+        "confidence": "high",
+        "markers": [
+          "tsconfig.json"
+        ]
+      }
+    ],
+    "frameworks": [
+      {
+        "name": "@sveltejs/kit",
+        "version": "2.57.0",
+        "category": "fullstack"
+      },
+      {
+        "name": "svelte",
+        "version": "5.55.2",
+        "category": "frontend"
+      },
+      {
+        "name": "vite",
+        "version": "8.0.7",
+        "category": "build"
+      }
+    ],
+    "packageManager": "npm",
+    "runtime": null
+  },
+  "build": {
+    "buildCommand": "npm run build",
+    "testCommand": null,
+    "lintCommand": null,
+    "devCommand": "npm run dev",
+    "scripts": {
+      "dev": "vite dev",
+      "build": "vite build",
+      "preview": "vite preview",
+      "prepare": "svelte-kit sync || echo ''",
+      "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+      "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+    }
+  },
+  "conventions": {
+    "namingStyle": null,
+    "importStyle": null,
+    "testPattern": null,
+    "fileOrganization": null
+  },
+  "structure": {
+    "isMonorepo": false,
+    "workspaces": [],
+    "mainDirectories": [
+      "src",
+      "static"
+    ],
+    "gitBranches": null
+  },
+  "customNotes": [],
+  "directoryMap": {
+    "src": {
+      "path": "src",
+      "purpose": "Source code",
+      "fileCount": 3,
+      "lastAccessed": 1782269934049,
+      "keyFiles": [
+        "app.css",
+        "app.d.ts",
+        "app.html"
+      ]
+    },
+    "static": {
+      "path": "static",
+      "purpose": "Static files",
+      "fileCount": 3,
+      "lastAccessed": 1782269934052,
+      "keyFiles": [
+        "me-marseille.png",
+        "me-marseille.webp",
+        "robots.txt"
+      ]
+    },
+    "src/lib": {
+      "path": "src/lib",
+      "purpose": "Library code",
+      "fileCount": 2,
+      "lastAccessed": 1782269934070,
+      "keyFiles": [
+        "index.ts",
+        "tokens.ts"
+      ]
+    },
+    "src/routes": {
+      "path": "src/routes",
+      "purpose": "Route handlers",
+      "fileCount": 2,
+      "lastAccessed": 1782269934076,
+      "keyFiles": [
+        "+layout.svelte",
+        "+page.svelte"
+      ]
+    }
+  },
+  "hotPaths": [],
+  "userDirectives": []
+}

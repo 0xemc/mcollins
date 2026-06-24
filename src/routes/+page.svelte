@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="preload" href="/me-marseille.png" as="image" />
+  <link rel="preload" href="/me-marseille.webp" as="image" type="image/webp" />
 </svelte:head>
 
 <div class="wrap">
@@ -22,7 +22,10 @@
   <section class="intro">
     <div class="intro-title">
       <div class="hd-photo-wrap">
-        <img src="/me-marseille.png" alt="Michael Collins" class="hd-photo" fetchpriority="high" />
+        <picture>
+          <source srcset="/me-marseille.webp" type="image/webp" />
+          <img src="/me-marseille.png" alt="Michael Collins" class="hd-photo" fetchpriority="high" />
+        </picture>
       </div>
       <div class="intro-text">
         <h1><span class="n-light">Michael</span><span class="n-reg">&thinsp;Collins</span></h1>
