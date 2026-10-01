@@ -15,7 +15,10 @@
   <!-- ── Header ───────────────────────────────── -->
   <header class="hd">
     <span class="hd-logo">MC<span class="cursor">_</span></span>
-    <a href="mailto:hello@mcoll.net" class="hd-avail">Available for contract</a>
+    <nav class="hd-nav">
+      <a href="/blog" class="hd-link">Blog</a>
+      <a href="mailto:hello@mcoll.net" class="hd-avail">Available for contract</a>
+    </nav>
   </header>
 
   <!-- ── Intro ────────────────────────────────── -->
@@ -186,6 +189,20 @@
     filter: grayscale(100%) brightness(0.8) contrast(1.1);
     display: block;
   }
+  .hd-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+  .hd-link {
+    font-size: 0.64rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #999;
+    transition: color 0.15s;
+  }
+  .hd-link:hover { color: #caff00; }
   .hd-avail {
     font-size: 0.64rem;
     font-weight: 400;
